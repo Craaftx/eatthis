@@ -1,0 +1,10 @@
+{
+  "google": {
+    "apiKey": "API_KEY",
+    "libraries": ["LIBRARY_ONE","LIBRARY_TWO"]
+  },
+  "yelp": {
+    "clientId": "API_CLIENT_ID",
+    "apiKey": "API_KEY"
+  }
+}
