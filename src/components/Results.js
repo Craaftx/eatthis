@@ -22,8 +22,10 @@ const InfosTitle = styled.h2`
 `;
 
 export default class Results extends React.Component {
-  addMarker(restaurant, map) {
+  addMarker = restaurant => {
+    const map = this.context.map
     const coordinates = { lat: restaurant.latitude, lng: restaurant.longitude };
+
     new window.google.maps.Marker({
       position: coordinates,
       animation: window.google.maps.Animation.DROP,
@@ -40,14 +42,7 @@ export default class Results extends React.Component {
         {this.props.restaurants.map((data, index) => {
           const restaurant = new Restaurant(data);
           return (
-            <div
-              onClick={e => {
-                e.preventDefault();
-                this.addMarker(restaurant, this.context.map).bind(this);
-              }}
-            >
-              <RestaurantCard key={index} restaurant={restaurant} />
-            </div>
+              <RestaurantCard key={index} restaurant={restaurant} addMarker={this.addMarker} />
           );
         })}
       </Infos>

@@ -56,9 +56,9 @@ const RestaurantDescriptionFood = styled.div`
   }
 `;
 
-export const RestaurantCard = ({ restaurant }) => {
+export const RestaurantCard = ({ restaurant, addMarker }) => {
   return (
-    <Restaurant>
+    <Restaurant onClick={() => addMarker(restaurant)}>
       <RestaurantDescription>
         <h3>{restaurant.name}</h3>
         <small>
