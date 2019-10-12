@@ -4,7 +4,7 @@ import GoogleApi from "../utils/GoogleApi";
 import config from "../config";
 import googleMapsTheme from "../utils/GoogleMapsTheme";
 import MyContext from "../utils/MyContext";
-import usermarker from "../usermarker.jpg";
+import usermarker from "../usermarker.png";
 
 const Map = styled.div`
   width: 100%;

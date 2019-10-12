@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Restaurant from "../model/Restaurant";
 import { RestaurantCard } from "./RestaurantCard";
 import MyContext from "../utils/MyContext";
-import marker from "../marker.jpg"
+import marker from "../marker.png"
 
 const Infos = styled.div`
   z-index: 10;
