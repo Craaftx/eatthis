@@ -52,7 +52,7 @@ export class GoogleMaps extends React.Component {
           new window.google.maps.Marker({
             position: pos,
             animation: window.google.maps.Animation.DROP,
-            icon: userposition,
+            icon: usermarker,
             map: this.map,
           });
         }.bind(this),
