@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Restaurant from "../model/Restaurant";
-import { RestaurantCard } from "./RestaurantCard";
+import RestaurantCard from "./RestaurantCard";
 import MyContext from "../utils/MyContext";
-import marker from "../marker.png"
+import marker from "../marker.png";
 
 const Infos = styled.div`
   z-index: 10;
@@ -22,13 +22,13 @@ const InfosTitle = styled.h2`
 `;
 
 export default class Results extends React.Component {
-  addMarker(restaurant, map) {
+  static addMarker(restaurant, map) {
     const coordinates = { lat: restaurant.latitude, lng: restaurant.longitude };
-    new window.google.maps.Marker({
+    const GoogleMapsMarker = new window.google.maps.Marker({
       position: coordinates,
       animation: window.google.maps.Animation.DROP,
       icon: marker,
-      map: map,
+      map,
       title: "Hello World!"
     });
   }
@@ -40,13 +40,13 @@ export default class Results extends React.Component {
         {this.props.restaurants.map((data, index) => {
           const restaurant = new Restaurant(data);
           return (
-            <div
-              onClick={() => {
+            <RestaurantCard
+              key={index}
+              restaurant={restaurant}
+              event={() => {
                 this.addMarker(restaurant, this.context.map);
               }}
-            >
-              <RestaurantCard key={index} restaurant={restaurant} />
-            </div>
+            />
           );
         })}
       </Infos>

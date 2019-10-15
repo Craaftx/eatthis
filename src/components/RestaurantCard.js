@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Stars } from "./Stars";
+import React from 'react';
+import styled from 'styled-components';
+import { Stars } from './Stars';
 
 const Restaurant = styled.div`
   display: flex;
@@ -55,14 +55,15 @@ const RestaurantDescriptionFood = styled.div`
   }
 `;
 
-export const RestaurantCard = ({ restaurant }) => {
+const RestaurantCard = ({ restaurant, event }) => {
   return (
-    <Restaurant>
+    <Restaurant onClick={event}>
       <RestaurantDescription>
         <h3>{restaurant.name}</h3>
         <small>
           {/* TODO: Use Map Quest to get distance (bike, car, walk), see documentation */}
-          <i className="lni-direction-alt"></i> 0m de votre position
+          <i className="lni-direction-alt" /> 
+          0m de votre position
         </small>
         <RestaurantRating>
           <Stars number={restaurant.rating} />
@@ -70,10 +71,12 @@ export const RestaurantCard = ({ restaurant }) => {
         </RestaurantRating>
         <RestaurantDescriptionFood>
           <h4>Mots Clés</h4>
-          <span>{restaurant.categories.join(", ")}</span>
+          <span>{restaurant.categories.join(', ')}</span>
         </RestaurantDescriptionFood>
       </RestaurantDescription>
       <RestaurantImage src={restaurant.imageUrl} alt={restaurant.name} />
     </Restaurant>
   );
 };
+
+export default RestaurantCard;
