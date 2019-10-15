@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Stars } from "./Stars";
-import placeholder from "../placeholder.jpg"
 
 const Restaurant = styled.div`
   display: flex;
@@ -74,7 +73,7 @@ export const RestaurantCard = ({ restaurant }) => {
           <span>{restaurant.categories.join(", ")}</span>
         </RestaurantDescriptionFood>
       </RestaurantDescription>
-      <RestaurantImage src={restaurant.imageUrl ? restaurant.imageUrl : placeholder} alt={restaurant.name} />
+      <RestaurantImage src={restaurant.imageUrl} alt={restaurant.name} />
     </Restaurant>
   );
 };

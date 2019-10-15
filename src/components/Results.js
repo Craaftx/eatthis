@@ -41,9 +41,8 @@ export default class Results extends React.Component {
           const restaurant = new Restaurant(data);
           return (
             <div
-              onClick={e => {
-                e.preventDefault();
-                this.addMarker(restaurant, this.context.map).bind(this);
+              onClick={() => {
+                this.addMarker(restaurant, this.context.map);
               }}
             >
               <RestaurantCard key={index} restaurant={restaurant} />
