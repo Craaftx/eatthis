@@ -1,860 +1,1322 @@
-{
-    "businesses": [
-        {
-            "id": "hZi_1g_3ti8mw4A58q9hYA",
-            "alias": "le-lion-clermont-ferrand-2",
-            "name": "Le Lion",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/SwTkQfL4sg2owHZAoydmmA/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-lion-clermont-ferrand-2?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 7,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                },
-                {
-                    "alias": "french",
-                    "title": "French"
-                }
-            ],
-            "rating": 3.0,
-            "coordinates": {
-                "latitude": 45.77684,
-                "longitude": 3.08149
-            },
-            "transactions": [],
-            "price": "€€",
-            "location": {
-                "address1": "Hôtel le Lion",
-                "address2": "16 place de Jaude",
-                "address3": "",
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "Hôtel le Lion",
-                    "16 place de Jaude",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473176080",
-            "display_phone": "+33 4 73 17 60 80",
-            "distance": 2682.5185480517016
-        },
-        {
-            "id": "6gTunSfb4cwE2s1Mm7wpjg",
-            "alias": "hpark-clermont-ferrand",
-            "name": "Hpark",
-            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/90-1Ln4bGYoKLUTqNjsy1w/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/hpark-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 2,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                },
-                {
-                    "alias": "lounges",
-                    "title": "Lounges"
-                },
-                {
-                    "alias": "sportsbars",
-                    "title": "Sports Bars"
-                }
-            ],
-            "rating": 4.5,
-            "coordinates": {
-                "latitude": 45.7622086608675,
-                "longitude": 3.14132583070241
-            },
-            "transactions": [],
-            "price": "€€",
-            "location": {
-                "address1": "Rue de l'Eminée",
-                "address2": "",
-                "address3": "",
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "Rue de l'Eminée",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473914031",
-            "display_phone": "+33 4 73 91 40 31",
-            "distance": 3555.785790518503
-        },
-        {
-            "id": "cziWOpOSLAfxiFw8F-CVrA",
-            "alias": "brasserie-le-dome-clermont-ferrand",
-            "name": "Brasserie Le Dome",
-            "image_url": "",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/brasserie-le-dome-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 7,
-            "categories": [
-                {
-                    "alias": "bistros",
-                    "title": "Bistros"
-                },
-                {
-                    "alias": "tea",
-                    "title": "Tea Rooms"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.0,
-            "coordinates": {
-                "latitude": 45.774335,
-                "longitude": 3.083834
-            },
-            "transactions": [],
-            "location": {
-                "address1": "18 Rue d`Allagnat",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "18 Rue d`Allagnat",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473933138",
-            "display_phone": "+33 4 73 93 31 38",
-            "distance": 2642.3784490148196
-        },
-        {
-            "id": "7XVgwNkzaKWa8u20G84sQA",
-            "alias": "brasserie-l-europe-clermont-ferrand",
-            "name": "Brasserie l'Europe",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1ZtcQc6e9n8VMUFRK7qLHA/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/brasserie-l-europe-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 3,
-            "categories": [
-                {
-                    "alias": "bistros",
-                    "title": "Bistros"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 3.5,
-            "coordinates": {
-                "latitude": 45.7821398,
-                "longitude": 3.0946991
-            },
-            "transactions": [],
-            "location": {
-                "address1": "14 Place des Carmes Déchaux",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "14 Place des Carmes Déchaux",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473901248",
-            "display_phone": "+33 4 73 90 12 48",
-            "distance": 1491.5342241820706
-        },
-        {
-            "id": "40VyTd7NZN8u4bArYpwneg",
-            "alias": "l-auguste-clermont-ferrand",
-            "name": "L'Auguste",
-            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ewKbyGB32gSaW1a_Ttt-kA/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/l-auguste-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 3,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 3.5,
-            "coordinates": {
-                "latitude": 45.7752344596144,
-                "longitude": 3.08197799232636
-            },
-            "transactions": [],
-            "price": "€€€",
-            "location": {
-                "address1": "Place de Jaude",
-                "address2": "Rue Giscard de la tour Fondue",
-                "address3": "",
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "Place de Jaude",
-                    "Rue Giscard de la tour Fondue",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473931010",
-            "display_phone": "+33 4 73 93 10 10",
-            "distance": 2714.7650197822804
-        },
-        {
-            "id": "fybtMPC5oKjTdvBkRu3kFQ",
-            "alias": "le-derrière-clermont-ferrand",
-            "name": "Le Derrière",
-            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/zlP0uqwNKdnWUoE0bbqMlA/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-derri%C3%A8re-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 6,
-            "categories": [
-                {
-                    "alias": "bars",
-                    "title": "Bars"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.0,
-            "coordinates": {
-                "latitude": 45.7779609273318,
-                "longitude": 3.08550875277865
-            },
-            "transactions": [],
-            "price": "€€",
-            "location": {
-                "address1": "12 place de la Victoire",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "12 place de la Victoire",
-                    "63000 Clermont Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473915714",
-            "display_phone": "+33 4 73 91 57 14",
-            "distance": 2331.736686320523
-        },
-        {
-            "id": "2WY2MxviEC_o-ClLte0Ghw",
-            "alias": "la-brasserie-auvergnate-aubière",
-            "name": "La Brasserie Auvergnate",
-            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ntm2JFvTwUZDXB3L19dDSQ/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/la-brasserie-auvergnate-aubi%C3%A8re?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 4,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.5,
-            "coordinates": {
-                "latitude": 45.75598,
-                "longitude": 3.13047
-            },
-            "transactions": [],
-            "price": "€€",
-            "location": {
-                "address1": "10 rue des Sauzes",
-                "address2": "",
-                "address3": "",
-                "city": "Aubière",
-                "zip_code": "63170",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "10 rue des Sauzes",
-                    "63170 Aubière",
-                    "France"
-                ]
-            },
-            "phone": "+33473275718",
-            "display_phone": "+33 4 73 27 57 18",
-            "distance": 3752.8944717165386
-        },
-        {
-            "id": "O1ji-scdnaWfoEFy2lw7Hg",
-            "alias": "le-faisan-doré-clermont-ferrand-4",
-            "name": "Le Faisan Doré",
-            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/tDIbPX8JGgVQ4aCGLLEMgw/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-faisan-dor%C3%A9-clermont-ferrand-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 13,
-            "categories": [
-                {
-                    "alias": "french",
-                    "title": "French"
-                },
-                {
-                    "alias": "pubs",
-                    "title": "Pubs"
-                }
-            ],
-            "rating": 3.0,
-            "coordinates": {
-                "latitude": 45.7769112,
-                "longitude": 3.0813294
-            },
-            "transactions": [],
-            "price": "€€",
-            "location": {
-                "address1": "14 place de Jaude",
-                "address2": "",
-                "address3": "",
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "14 place de Jaude",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473934505",
-            "display_phone": "+33 4 73 93 45 05",
-            "distance": 2674.545204594786
-        },
-        {
-            "id": "P_4UmyIbpyZehQqrNSbTxg",
-            "alias": "le-kepler-clermont-ferrand",
-            "name": "Le Kepler",
-            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tZ_UUqoVpS3pKSpLC0Bk7w/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-kepler-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 6,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.5,
-            "coordinates": {
-                "latitude": 45.7809671,
-                "longitude": 3.1213892
-            },
-            "transactions": [],
-            "location": {
-                "address1": "1 Rue Kepler",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "1 Rue Kepler",
-                    "63000 Clermont Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473140888",
-            "display_phone": "+33 4 73 14 08 88",
-            "distance": 967.0140691215859
-        },
-        {
-            "id": "vWJttWzIc_61mkmjzuM_zQ",
-            "alias": "brasserie-du-theatre-clermont-ferrand",
-            "name": "Brasserie du Theatre",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/_GmPhbofr_lANVzAMZnSOg/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/brasserie-du-theatre-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 1,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.0,
-            "coordinates": {
-                "latitude": 45.7775511375255,
-                "longitude": 3.08281310318767
-            },
-            "transactions": [],
-            "location": {
-                "address1": "6 rue Nestor Perret",
-                "address2": "",
-                "address3": "",
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "6 rue Nestor Perret",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473401164",
-            "display_phone": "+33 4 73 40 11 64",
-            "distance": 2540.207665149292
-        },
-        {
-            "id": "QuygqSNM_C9jB4hez4AEOw",
-            "alias": "restaurant-au-cochon-corrézien-clermont-ferrand-3",
-            "name": "Restaurant Au Cochon Corrézien",
-            "image_url": "",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/restaurant-au-cochon-corr%C3%A9zien-clermont-ferrand-3?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 1,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.0,
-            "coordinates": {
-                "latitude": 45.767,
-                "longitude": 3.12034
-            },
-            "transactions": [],
-            "price": "€",
-            "location": {
-                "address1": "305 Rue Oradou",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "305 Rue Oradou",
-                    "63000 Clermont Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473264473",
-            "display_phone": "+33 4 73 26 44 73",
-            "distance": 2316.1866423932734
-        },
-        {
-            "id": "DgrQkoDOaxKi2_6JQyzsbA",
-            "alias": "le-bistrot-de-clermont-clermont-ferrand",
-            "name": "Le Bistrot de Clermont",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/EGiUrEbROTRmrsWMVWlnAA/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-bistrot-de-clermont-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 3,
-            "categories": [
-                {
-                    "alias": "french",
-                    "title": "French"
-                },
-                {
-                    "alias": "bistros",
-                    "title": "Bistros"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.0,
-            "coordinates": {
-                "latitude": 45.76923372,
-                "longitude": 3.08340053
-            },
-            "transactions": [],
-            "price": "€€€",
-            "location": {
-                "address1": "25 Avenue De la libération",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "25 Avenue De la libération",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473932222",
-            "display_phone": "+33 4 73 93 22 22",
-            "distance": 3011.1518489049304
-        },
-        {
-            "id": "QQ6HwgJAX-zLCR_LeZ3FzA",
-            "alias": "au-bureau-clermont-ferrand",
-            "name": "Au Bureau",
-            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/RMZNgbHedNzGsnWHYpRrvA/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/au-bureau-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 5,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                },
-                {
-                    "alias": "pubs",
-                    "title": "Pubs"
-                }
-            ],
-            "rating": 3.0,
-            "coordinates": {
-                "latitude": 45.757947,
-                "longitude": 3.147706
-            },
-            "transactions": [],
-            "price": "€€",
-            "location": {
-                "address1": "25-29 avenue Ernest Cristal",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "25-29 avenue Ernest Cristal",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473149818",
-            "display_phone": "+33 4 73 14 98 18",
-            "distance": 4236.217186170553
-        },
-        {
-            "id": "STdlpv45Q7mOSI7DhmzBlg",
-            "alias": "bar-de-la-montagne-clermont-ferrand",
-            "name": "Bar de la Montagne",
-            "image_url": "",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/bar-de-la-montagne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 1,
-            "categories": [
-                {
-                    "alias": "bistros",
-                    "title": "Bistros"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 5.0,
-            "coordinates": {
-                "latitude": 45.7787158,
-                "longitude": 3.0825125
-            },
-            "transactions": [],
-            "location": {
-                "address1": "29 Bis Rue du Cheval Blanc",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "29 Bis Rue du Cheval Blanc",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473376339",
-            "display_phone": "+33 4 73 37 63 39",
-            "distance": 2510.392122184439
-        },
-        {
-            "id": "GLc9tuC5-24P1SBCjO5M9w",
-            "alias": "le-jules-verne-clermont-ferrand",
-            "name": "Le Jules Verne",
-            "image_url": "",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-jules-verne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 3,
-            "categories": [
-                {
-                    "alias": "fooddeliveryservices",
-                    "title": "Food Delivery Services"
-                },
-                {
-                    "alias": "bistros",
-                    "title": "Bistros"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 3.5,
-            "coordinates": {
-                "latitude": 45.7880875,
-                "longitude": 3.1383438
-            },
-            "transactions": [],
-            "price": "€€€",
-            "location": {
-                "address1": "40 Rue Jules Verne",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63100",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "40 Rue Jules Verne",
-                    "63100 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473232425",
-            "display_phone": "+33 4 73 23 24 25",
-            "distance": 2001.8607498265508
-        },
-        {
-            "id": "deFS_pv6ihwAudLqIIvByQ",
-            "alias": "le-delios-clermont-ferrand",
-            "name": "Le Delio's",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/vuoTTzJH0lQixt3gcTROUA/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-delios-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 3,
-            "categories": [
-                {
-                    "alias": "french",
-                    "title": "French"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 3.5,
-            "coordinates": {
-                "latitude": 45.76098,
-                "longitude": 3.094269
-            },
-            "transactions": [],
-            "price": "€",
-            "location": {
-                "address1": "18 bd Winston Churchill",
-                "address2": "",
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "18 bd Winston Churchill",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473759866",
-            "display_phone": "+33 4 73 75 98 66",
-            "distance": 3233.635427434661
-        },
-        {
-            "id": "4_ywgCFUAVcY8Pw6zMM-1A",
-            "alias": "brasserie-des-volcans-saint-ours-les-roches",
-            "name": "Brasserie des Volcans",
-            "image_url": "",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/brasserie-des-volcans-saint-ours-les-roches?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 1,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 4.0,
-            "coordinates": {
-                "latitude": 45.813602,
-                "longitude": 2.939818
-            },
-            "transactions": [],
-            "location": {
-                "address1": "2 route de Mazayes",
-                "address2": "",
-                "address3": null,
-                "city": "Saint-Ours-les Roches",
-                "zip_code": "63230",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "2 route de Mazayes",
-                    "63230 Saint-Ours-les Roches",
-                    "France"
-                ]
-            },
-            "phone": "+33473197000",
-            "display_phone": "+33 4 73 19 70 00",
-            "distance": 13711.517234039082
-        },
-        {
-            "id": "4_huDGTuINLBEVfH0ouPwA",
-            "alias": "baths-clermont-ferrand",
-            "name": "Bath's",
-            "image_url": "",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/baths-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 2,
-            "categories": [
-                {
-                    "alias": "french",
-                    "title": "French"
-                },
-                {
-                    "alias": "bistros",
-                    "title": "Bistros"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 3.0,
-            "coordinates": {
-                "latitude": 45.779332,
-                "longitude": 3.082616
-            },
-            "transactions": [],
-            "location": {
-                "address1": "Place Saint-Pierre",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont-Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "Place Saint-Pierre",
-                    "63000 Clermont-Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473312322",
-            "display_phone": "+33 4 73 31 23 22",
-            "distance": 2478.1906759669064
-        },
-        {
-            "id": "kWJEFiexDu3cpoNgmSSmCA",
-            "alias": "le-richelieu-clermont-ferrand",
-            "name": "Le Richelieu",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ydGfV2_vOrc-mUrBZGVuog/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/le-richelieu-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 6,
-            "categories": [
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                },
-                {
-                    "alias": "bistros",
-                    "title": "Bistros"
-                }
-            ],
-            "rating": 1.5,
-            "coordinates": {
-                "latitude": 45.7754,
-                "longitude": 3.08192
-            },
-            "transactions": [],
-            "location": {
-                "address1": "44 place de Jaude",
-                "address2": null,
-                "address3": null,
-                "city": "Clermont Ferrand",
-                "zip_code": "63000",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "44 place de Jaude",
-                    "63000 Clermont Ferrand",
-                    "France"
-                ]
-            },
-            "phone": "+33473292424",
-            "display_phone": "+33 4 73 29 24 24",
-            "distance": 2709.797919728026
-        },
-        {
-            "id": "1sqQUYsRtxEgkj0uYiiK1w",
-            "alias": "brasserie-le-zénith-cournon-d-auvergne-4",
-            "name": "Brasserie le Zénith",
-            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/dITGTNccgTBoULUkDu5O-g/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/brasserie-le-z%C3%A9nith-cournon-d-auvergne-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
-            "review_count": 1,
-            "categories": [
-                {
-                    "alias": "french",
-                    "title": "French"
-                },
-                {
-                    "alias": "brasseries",
-                    "title": "Brasseries"
-                }
-            ],
-            "rating": 3.0,
-            "coordinates": {
-                "latitude": 45.742323,
-                "longitude": 3.157979
-            },
-            "transactions": [],
-            "location": {
-                "address1": "39 rue Sarliève",
-                "address2": null,
-                "address3": null,
-                "city": "Cournon d'Auvergne",
-                "zip_code": "63800",
-                "country": "FR",
-                "state": "63",
-                "display_address": [
-                    "39 rue Sarliève",
-                    "63800 Cournon d'Auvergne",
-                    "France"
-                ]
-            },
-            "phone": "+33473843518",
-            "display_phone": "+33 4 73 84 35 18",
-            "distance": 6100.278910322075
-        }
+[
+  {
+    "id": "hZi_1g_3ti8mw4A58q9hYA",
+    "alias": "le-lion-clermont-ferrand-2",
+    "name": "Le Lion",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/SwTkQfL4sg2owHZAoydmmA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-lion-clermont-ferrand-2?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 7,
+    "categories": [
+      { "alias": "brasseries", "title": "Brasseries" },
+      { "alias": "french", "title": "French" }
     ],
-    "total": 36,
-    "region": {
-        "center": {
-            "longitude": 3.1125640869140625,
-            "latitude": 45.787111588882695
+    "rating": 3,
+    "coordinates": { "latitude": 45.77684, "longitude": 3.08149 },
+    "transactions": [],
+    "price": "€€",
+    "location": {
+      "address1": "Hôtel le Lion",
+      "address2": "16 place de Jaude",
+      "address3": "",
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "Hôtel le Lion",
+        "16 place de Jaude",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473176080",
+    "display_phone": "+33 4 73 17 60 80",
+    "distance": 2682.5185480517016,
+    "reviews": [
+      {
+        "id": "E6gNPX7jhXldH3ddLzlL4w",
+        "url": "https://www.yelp.com/biz/le-lion-clermont-ferrand-2?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=E6gNPX7jhXldH3ddLzlL4w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Venu ce jour et quelle déception ...\nCommande prise rapidement et au bout de 50 mn toujours rien de servi. \n\nVraiment déçue !!!",
+        "rating": 1,
+        "time_created": "2017-10-10 14:02:37",
+        "user": {
+          "id": "P00dUlPJYKpBBhyZzssc2Q",
+          "profile_url": "https://www.yelp.com/user_details?userid=P00dUlPJYKpBBhyZzssc2Q",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/b8Q9bUCUUmvEXctldXVF4w/o.jpg",
+          "name": "Laetitia D."
         }
-    }
-}
+      },
+      {
+        "id": "ghHxosY2apcn8dwTxcUCbQ",
+        "url": "https://www.yelp.com/biz/le-lion-clermont-ferrand-2?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=ghHxosY2apcn8dwTxcUCbQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "La bière est bien servie. Les plats sont bons. La brasserie est parfaitement situé sur la place Jaude.\nJ'y reviendrai avec plaisir !",
+        "rating": 4,
+        "time_created": "2016-06-09 11:21:24",
+        "user": {
+          "id": "nu5u9FPajn6-n9mbEVSPCg",
+          "profile_url": "https://www.yelp.com/user_details?userid=nu5u9FPajn6-n9mbEVSPCg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/aj17QO8XvcE2X3PtjepC0Q/o.jpg",
+          "name": "Charles D."
+        }
+      },
+      {
+        "id": "2r1ujfmkZjvJphZ7qhJ9cQ",
+        "url": "https://www.yelp.com/biz/le-lion-clermont-ferrand-2?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=2r1ujfmkZjvJphZ7qhJ9cQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Anciennement appelée la Brasserie de Lyon, cet établissement est devenu la brasserie \"Le Lion\" suite à un changement de propriétaire.\nJ'ai mangé à...",
+        "rating": 4,
+        "time_created": "2015-06-27 05:04:16",
+        "user": {
+          "id": "ZTO4SjZ-TzZwD4nIcTc7Gg",
+          "profile_url": "https://www.yelp.com/user_details?userid=ZTO4SjZ-TzZwD4nIcTc7Gg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/Ocjric9xQjgYaSo3xY5Srw/o.jpg",
+          "name": "Zineb M."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cziWOpOSLAfxiFw8F-CVrA",
+    "alias": "brasserie-le-dome-clermont-ferrand",
+    "name": "Brasserie Le Dome",
+    "image_url": "",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/brasserie-le-dome-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 7,
+    "categories": [
+      { "alias": "bistros", "title": "Bistros" },
+      { "alias": "tea", "title": "Tea Rooms" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 4,
+    "coordinates": { "latitude": 45.774335, "longitude": 3.083834 },
+    "transactions": [],
+    "location": {
+      "address1": "18 Rue d`Allagnat",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "18 Rue d`Allagnat",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473933138",
+    "display_phone": "+33 4 73 93 31 38",
+    "distance": 2642.3784490148196,
+    "reviews": [
+      {
+        "id": "1PiMDXvLHaSjfT2wQUqgMg",
+        "url": "https://www.yelp.com/biz/brasserie-le-dome-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=1PiMDXvLHaSjfT2wQUqgMg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Une bonne truffade, un personnelle sympathique, après un match De l'ASM rien de mieux!",
+        "rating": 4,
+        "time_created": "2016-12-18 11:06:24",
+        "user": {
+          "id": "NON3cdEOGtD5NhhYSGI5pw",
+          "profile_url": "https://www.yelp.com/user_details?userid=NON3cdEOGtD5NhhYSGI5pw",
+          "image_url": "https://s3-media4.fl.yelpcdn.com/photo/VhrNTBA-nnaspq4iwQKxAQ/o.jpg",
+          "name": "Antoine B."
+        }
+      },
+      {
+        "id": "brHBPHkkKhWau1oPldPOug",
+        "url": "https://www.yelp.com/biz/brasserie-le-dome-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=brHBPHkkKhWau1oPldPOug&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Restaurant brasserie correcte où l'on sert une truffade très correcte et en quantité. Le personnel est chaleureux et attentionné, toutefois le cadre est...",
+        "rating": 3,
+        "time_created": "2016-01-02 08:30:05",
+        "user": {
+          "id": "xcjBf-_7Y8c2nSVhBO8wnA",
+          "profile_url": "https://www.yelp.com/user_details?userid=xcjBf-_7Y8c2nSVhBO8wnA",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/5rDbQCtn2FsHl3-2lwCw3w/o.jpg",
+          "name": "Jean-Baptiste M."
+        }
+      },
+      {
+        "id": "tcSriWRWeSHIvESs9j4hTg",
+        "url": "https://www.yelp.com/biz/brasserie-le-dome-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=tcSriWRWeSHIvESs9j4hTg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Mais en plus de la truffade . . .\nIl y a aussi bien d'autres plats de qualité. La viande est excellente et le patron qui a des origines du Languedoc, sert...",
+        "rating": 4,
+        "time_created": "2012-02-25 09:57:22",
+        "user": {
+          "id": "L78b116n7OjHJfa70PgMvA",
+          "profile_url": "https://www.yelp.com/user_details?userid=L78b116n7OjHJfa70PgMvA",
+          "image_url": null,
+          "name": "jasminsarl"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6gTunSfb4cwE2s1Mm7wpjg",
+    "alias": "hpark-clermont-ferrand",
+    "name": "Hpark",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/90-1Ln4bGYoKLUTqNjsy1w/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/hpark-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 2,
+    "categories": [
+      { "alias": "brasseries", "title": "Brasseries" },
+      { "alias": "lounges", "title": "Lounges" },
+      { "alias": "sportsbars", "title": "Sports Bars" }
+    ],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 45.7622086608675,
+      "longitude": 3.14132583070241
+    },
+    "transactions": [],
+    "price": "€€",
+    "location": {
+      "address1": "Rue de l'Eminée",
+      "address2": "",
+      "address3": "",
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": ["Rue de l'Eminée", "63000 Clermont-Ferrand", "France"]
+    },
+    "phone": "+33473914031",
+    "display_phone": "+33 4 73 91 40 31",
+    "distance": 3555.785790518503,
+    "reviews": [
+      {
+        "id": "D6XqDFG0-aSNDVmoJF17lA",
+        "url": "https://www.yelp.com/biz/hpark-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=D6XqDFG0-aSNDVmoJF17lA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Ambiance sympa avec une salle pour jouer au rugby en salle et au foot. Du squash aussi possible. Des plats simple style brasserie, des tartares en tout...",
+        "rating": 5,
+        "time_created": "2014-10-02 12:24:06",
+        "user": {
+          "id": "zyRhQdHL07T6liSCpfM1cA",
+          "profile_url": "https://www.yelp.com/user_details?userid=zyRhQdHL07T6liSCpfM1cA",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/ACij98pQESzRV9Fs3MXz5Q/o.jpg",
+          "name": "Michael T."
+        }
+      },
+      {
+        "id": "tR66Wsnix7kMrJMSwnNE3Q",
+        "url": "https://www.yelp.com/biz/hpark-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=tR66Wsnix7kMrJMSwnNE3Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Deux déjeuners dans la semaine, des produits de qualité à chaque fois et un prix correct. Environ 20 € pour un plat, une eau et un café.\nLe cadre est très...",
+        "rating": 4,
+        "time_created": "2016-04-17 01:42:52",
+        "user": {
+          "id": "hhDr89woXLsAVJKsv-Dkxg",
+          "profile_url": "https://www.yelp.com/user_details?userid=hhDr89woXLsAVJKsv-Dkxg",
+          "image_url": null,
+          "name": "Jérôme R."
+        }
+      }
+    ]
+  },
+  {
+    "id": "7XVgwNkzaKWa8u20G84sQA",
+    "alias": "brasserie-l-europe-clermont-ferrand",
+    "name": "Brasserie l'Europe",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1ZtcQc6e9n8VMUFRK7qLHA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/brasserie-l-europe-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 3,
+    "categories": [
+      { "alias": "bistros", "title": "Bistros" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 3.5,
+    "coordinates": { "latitude": 45.7821398, "longitude": 3.0946991 },
+    "transactions": [],
+    "location": {
+      "address1": "14 Place des Carmes Déchaux",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "14 Place des Carmes Déchaux",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473901248",
+    "display_phone": "+33 4 73 90 12 48",
+    "distance": 1491.5342241820706,
+    "reviews": [
+      {
+        "id": "hVFU03j6bv1opvfFbjbvfA",
+        "url": "https://www.yelp.com/biz/brasserie-l-europe-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=hVFU03j6bv1opvfFbjbvfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Du bon et du un peu moins bon mais au global je suis satisfait de mon expérience dans cette Brasserie l'Europe.\nL'accueil est très bon, on nous explique...",
+        "rating": 4,
+        "time_created": "2015-05-19 07:54:09",
+        "user": {
+          "id": "YKLon_-M6Bf1ywU6YIyLGQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=YKLon_-M6Bf1ywU6YIyLGQ",
+          "image_url": "https://s3-media1.fl.yelpcdn.com/photo/cfkNsAJOhq5ZOdqxyuATSA/o.jpg",
+          "name": "Guillaume O."
+        }
+      },
+      {
+        "id": "kok6Z4SpembVG3NBTRxUxg",
+        "url": "https://www.yelp.com/biz/brasserie-l-europe-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=kok6Z4SpembVG3NBTRxUxg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Bruyant et cuisine qui laisse à désirer\nNous avons mangé là car nous étions pressés et pas le temps de chercher autre chose et nous avons été très déçus....",
+        "rating": 2,
+        "time_created": "2007-09-15 02:55:08",
+        "user": {
+          "id": "EdmdgeP84CZvNwFfa_VPSA",
+          "profile_url": "https://www.yelp.com/user_details?userid=EdmdgeP84CZvNwFfa_VPSA",
+          "image_url": "https://s3-media1.fl.yelpcdn.com/photo/KwnFVT4wC_o3Ubs1gQt4qQ/o.jpg",
+          "name": "miss-tic-tac"
+        }
+      },
+      {
+        "id": "yayyFXvBoDrx_3os9QY-bw",
+        "url": "https://www.yelp.com/biz/brasserie-l-europe-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=yayyFXvBoDrx_3os9QY-bw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "La brasserie a beaucoup changé depuis 2007\nDepuis peu la brasserie a bien changé. Pour les entrées il y a eu la mise en place d'un buffet avec beaucoup de...",
+        "rating": 5,
+        "time_created": "2009-06-04 02:38:44",
+        "user": {
+          "id": "qSW6Xbx2Ge5rCVNsbnzkyQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=qSW6Xbx2Ge5rCVNsbnzkyQ",
+          "image_url": null,
+          "name": "bartholome-s"
+        }
+      }
+    ]
+  },
+  {
+    "id": "40VyTd7NZN8u4bArYpwneg",
+    "alias": "l-auguste-clermont-ferrand",
+    "name": "L'Auguste",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ewKbyGB32gSaW1a_Ttt-kA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/l-auguste-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 3,
+    "categories": [{ "alias": "brasseries", "title": "Brasseries" }],
+    "rating": 3.5,
+    "coordinates": {
+      "latitude": 45.7752344596144,
+      "longitude": 3.08197799232636
+    },
+    "transactions": [],
+    "price": "€€€",
+    "location": {
+      "address1": "Place de Jaude",
+      "address2": "Rue Giscard de la tour Fondue",
+      "address3": "",
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "Place de Jaude",
+        "Rue Giscard de la tour Fondue",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473931010",
+    "display_phone": "+33 4 73 93 10 10",
+    "distance": 2714.7650197822804,
+    "reviews": [
+      {
+        "id": "TaomFaQazczEwdFxP22XwA",
+        "url": "https://www.yelp.com/biz/l-auguste-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=TaomFaQazczEwdFxP22XwA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "La carte, le cadre et la qualité du repas auraient mérité les 5 étoiles sans souci. Mais l'attente après le plat principal (25') avant simplement que l'on...",
+        "rating": 3,
+        "time_created": "2014-03-15 06:19:00",
+        "user": {
+          "id": "gc9NW7_WMlxcua3iUwLD5g",
+          "profile_url": "https://www.yelp.com/user_details?userid=gc9NW7_WMlxcua3iUwLD5g",
+          "image_url": "https://s3-media1.fl.yelpcdn.com/photo/I8QiwRQEk4QZThmrHgcDHg/o.jpg",
+          "name": "Chrystèle R."
+        }
+      },
+      {
+        "id": "32OpstgMMt2NVrd4Yi1RWg",
+        "url": "https://www.yelp.com/biz/l-auguste-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=32OpstgMMt2NVrd4Yi1RWg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "sympathique\nNous avons prit une salade en entree avec du jambon de pays : copieuse et tres bonne. Le plat: truffade et jambon de pays : bonne truffade mais...",
+        "rating": 4,
+        "time_created": "2014-10-17 10:02:46",
+        "user": {
+          "id": "QMOQs4bCPpSvp7JTBWYMDQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=QMOQs4bCPpSvp7JTBWYMDQ",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/iL3JTmsXFQlcopxf0rgfxA/o.jpg",
+          "name": "L.and.D L."
+        }
+      },
+      {
+        "id": "SuoMiaePAc2K6EcTI0jGpA",
+        "url": "https://www.yelp.com/biz/l-auguste-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=SuoMiaePAc2K6EcTI0jGpA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Un cadre sympathique mais une mauvaise expérience. J'ai simplement commandé un burger en demandant au serveur si il n'y avait pas quelque chose de...",
+        "rating": 3,
+        "time_created": "2015-10-25 00:42:39",
+        "user": {
+          "id": "OPP_5j2gJM8smI7t9YwuEQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=OPP_5j2gJM8smI7t9YwuEQ",
+          "image_url": "https://s3-media4.fl.yelpcdn.com/photo/Yu3hHojB_KbKXkByn2JhHQ/o.jpg",
+          "name": "Jennifer O."
+        }
+      }
+    ]
+  },
+  {
+    "id": "2WY2MxviEC_o-ClLte0Ghw",
+    "alias": "la-brasserie-auvergnate-aubière",
+    "name": "La Brasserie Auvergnate",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ntm2JFvTwUZDXB3L19dDSQ/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/la-brasserie-auvergnate-aubi%C3%A8re?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 4,
+    "categories": [{ "alias": "brasseries", "title": "Brasseries" }],
+    "rating": 4.5,
+    "coordinates": { "latitude": 45.75598, "longitude": 3.13047 },
+    "transactions": [],
+    "price": "€€",
+    "location": {
+      "address1": "10 rue des Sauzes",
+      "address2": "",
+      "address3": "",
+      "city": "Aubière",
+      "zip_code": "63170",
+      "country": "FR",
+      "state": "63",
+      "display_address": ["10 rue des Sauzes", "63170 Aubière", "France"]
+    },
+    "phone": "+33473275718",
+    "display_phone": "+33 4 73 27 57 18",
+    "distance": 3752.8944717165386,
+    "reviews": [
+      {
+        "id": "xnQirm2pKhSwzpDgxrxZOQ",
+        "url": "https://www.yelp.com/biz/la-brasserie-auvergnate-aubi%C3%A8re?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=xnQirm2pKhSwzpDgxrxZOQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Très bien, bon plat du jour, des salades copieuses, des desserts maison de très bonne qualité, le mille feuilles est particulièrement excellent.\nsi vous...",
+        "rating": 4,
+        "time_created": "2012-11-18 14:12:39",
+        "user": {
+          "id": "q-lPTqE6UvfTtpKDbbzecg",
+          "profile_url": "https://www.yelp.com/user_details?userid=q-lPTqE6UvfTtpKDbbzecg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/wQlro2m6Heg9kcrd3tyD6A/o.jpg",
+          "name": "Sam T."
+        }
+      },
+      {
+        "id": "WMT_-HD0uVyFpSNNWr6vqg",
+        "url": "https://www.yelp.com/biz/la-brasserie-auvergnate-aubi%C3%A8re?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=WMT_-HD0uVyFpSNNWr6vqg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Une équipe supère sympa et commerçante, un rapport qualité/prix exceptionnel dans un cadre simple et sans prétention, c'est ce qui vous attend dans cette...",
+        "rating": 4,
+        "time_created": "2011-03-07 03:27:19",
+        "user": {
+          "id": "kAIM1oo1mhcpfwJ2X1McZQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=kAIM1oo1mhcpfwJ2X1McZQ",
+          "image_url": "https://s3-media1.fl.yelpcdn.com/photo/Wkh8mEHNR3-YypyN4xICyw/o.jpg",
+          "name": "Davids650"
+        }
+      },
+      {
+        "id": "oo69W8fadbNUmRKSNiG_Qw",
+        "url": "https://www.yelp.com/biz/la-brasserie-auvergnate-aubi%C3%A8re?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=oo69W8fadbNUmRKSNiG_Qw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Brasserie tres sympa ou l'on est toujours bien reçu, tres bonne qualite au niveau de la restauration et du service. Un seul default a noter....il n est...",
+        "rating": 5,
+        "time_created": "2010-07-29 05:06:44",
+        "user": {
+          "id": "bTdJ-CLUQpo3bbdyBXlFeg",
+          "profile_url": "https://www.yelp.com/user_details?userid=bTdJ-CLUQpo3bbdyBXlFeg",
+          "image_url": "https://s3-media4.fl.yelpcdn.com/photo/GrZ_wOg5JH2CxWpK_4HdhA/o.jpg",
+          "name": "Xavier63"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fybtMPC5oKjTdvBkRu3kFQ",
+    "alias": "le-derrière-clermont-ferrand",
+    "name": "Le Derrière",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/zlP0uqwNKdnWUoE0bbqMlA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-derri%C3%A8re-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 6,
+    "categories": [
+      { "alias": "bars", "title": "Bars" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 4,
+    "coordinates": {
+      "latitude": 45.7779609273318,
+      "longitude": 3.08550875277865
+    },
+    "transactions": [],
+    "price": "€€",
+    "location": {
+      "address1": "12 place de la Victoire",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "12 place de la Victoire",
+        "63000 Clermont Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473915714",
+    "display_phone": "+33 4 73 91 57 14",
+    "distance": 2331.736686320523,
+    "reviews": [
+      {
+        "id": "__EK9Rkz2A8Zkdfu1FVXQQ",
+        "url": "https://www.yelp.com/biz/le-derri%C3%A8re-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=__EK9Rkz2A8Zkdfu1FVXQQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "J'adore !   Touriste occasionnellement dans la capitale auvergnate, j'ai eu 1 authentique coup d'coeur pour ce resto discret du centre ville. \nLes salades...",
+        "rating": 5,
+        "time_created": "2018-08-12 07:55:14",
+        "user": {
+          "id": "nu5u9FPajn6-n9mbEVSPCg",
+          "profile_url": "https://www.yelp.com/user_details?userid=nu5u9FPajn6-n9mbEVSPCg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/aj17QO8XvcE2X3PtjepC0Q/o.jpg",
+          "name": "Charles D."
+        }
+      },
+      {
+        "id": "3TN3BHbmc0tF7Q0_JVNtAQ",
+        "url": "https://www.yelp.com/biz/le-derri%C3%A8re-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=3TN3BHbmc0tF7Q0_JVNtAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Difficile de ne pas être fan de ce restaurant. \nD'abord le personnel y est adorable et très serviable. Les plats? On en a pour son argent. Les viandes sont...",
+        "rating": 4,
+        "time_created": "2015-09-02 02:43:35",
+        "user": {
+          "id": "YklE4XU6kSqkemN_4EkxsA",
+          "profile_url": "https://www.yelp.com/user_details?userid=YklE4XU6kSqkemN_4EkxsA",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/cP_kzm6cgGVHp8nYdOf5pA/o.jpg",
+          "name": "Thibault D."
+        }
+      },
+      {
+        "id": "InrofyzfrfPxorXDNNMf_w",
+        "url": "https://www.yelp.com/biz/le-derri%C3%A8re-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=InrofyzfrfPxorXDNNMf_w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Par ce beau soleil de printemps, j'avais envie d'une salade à la terrasse d'un restaurant. Je me suis donc assis à la terrasse de ce restaurant attiré par...",
+        "rating": 3,
+        "time_created": "2015-03-17 05:22:50",
+        "user": {
+          "id": "oVoher0DjyumqdNYDrp-dQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=oVoher0DjyumqdNYDrp-dQ",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/B7VCziZqx98qRFbq6lqYyQ/o.jpg",
+          "name": "Pascal C."
+        }
+      }
+    ]
+  },
+  {
+    "id": "O1ji-scdnaWfoEFy2lw7Hg",
+    "alias": "le-faisan-doré-clermont-ferrand-4",
+    "name": "Le Faisan Doré",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/tDIbPX8JGgVQ4aCGLLEMgw/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-faisan-dor%C3%A9-clermont-ferrand-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 13,
+    "categories": [
+      { "alias": "french", "title": "French" },
+      { "alias": "pubs", "title": "Pubs" }
+    ],
+    "rating": 3,
+    "coordinates": { "latitude": 45.7769112, "longitude": 3.0813294 },
+    "transactions": [],
+    "price": "€€",
+    "location": {
+      "address1": "14 place de Jaude",
+      "address2": "",
+      "address3": "",
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "14 place de Jaude",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473934505",
+    "display_phone": "+33 4 73 93 45 05",
+    "distance": 2674.545204594786,
+    "reviews": [
+      {
+        "id": "o8wuSw4Lnrb93tJ5NnATVg",
+        "url": "https://www.yelp.com/biz/le-faisan-dor%C3%A9-clermont-ferrand-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=o8wuSw4Lnrb93tJ5NnATVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "La bière est plutôt bonne, bien servie. Les plats sont bons sans être supra copieux. La brasserie est parfaitement bien situé.\nPar contre, le service est...",
+        "rating": 2,
+        "time_created": "2016-06-09 11:25:06",
+        "user": {
+          "id": "nu5u9FPajn6-n9mbEVSPCg",
+          "profile_url": "https://www.yelp.com/user_details?userid=nu5u9FPajn6-n9mbEVSPCg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/aj17QO8XvcE2X3PtjepC0Q/o.jpg",
+          "name": "Charles D."
+        }
+      },
+      {
+        "id": "b0iM_USlWUyMroGf_MJowQ",
+        "url": "https://www.yelp.com/biz/le-faisan-dor%C3%A9-clermont-ferrand-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=b0iM_USlWUyMroGf_MJowQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Cet établissement idéalement situé sur la place de Jaude au croisement de la rue Blatin est une bonne adresse.\n\nOn peut y aller pour boire un verre, prendre...",
+        "rating": 3,
+        "time_created": "2015-06-27 04:48:22",
+        "user": {
+          "id": "ZTO4SjZ-TzZwD4nIcTc7Gg",
+          "profile_url": "https://www.yelp.com/user_details?userid=ZTO4SjZ-TzZwD4nIcTc7Gg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/Ocjric9xQjgYaSo3xY5Srw/o.jpg",
+          "name": "Zineb M."
+        }
+      },
+      {
+        "id": "wIZaPm8CXmSQHH4X92SFBQ",
+        "url": "https://www.yelp.com/biz/le-faisan-dor%C3%A9-clermont-ferrand-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=wIZaPm8CXmSQHH4X92SFBQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Une brasserie très sympathique en plein Clermont Ferrand. Nous y sommes allés à 8 sans réservation : service rapide. Les plats y sont très copieux, de très...",
+        "rating": 5,
+        "time_created": "2014-09-20 23:39:54",
+        "user": {
+          "id": "7iex9oG1Gs0ODN05vBzO1Q",
+          "profile_url": "https://www.yelp.com/user_details?userid=7iex9oG1Gs0ODN05vBzO1Q",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/r8lxTXrnXcTOSZfJZ1cvmQ/o.jpg",
+          "name": "Christian P."
+        }
+      }
+    ]
+  },
+  {
+    "id": "P_4UmyIbpyZehQqrNSbTxg",
+    "alias": "le-kepler-clermont-ferrand",
+    "name": "Le Kepler",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tZ_UUqoVpS3pKSpLC0Bk7w/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-kepler-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 6,
+    "categories": [{ "alias": "brasseries", "title": "Brasseries" }],
+    "rating": 4.5,
+    "coordinates": { "latitude": 45.7809671, "longitude": 3.1213892 },
+    "transactions": [],
+    "location": {
+      "address1": "1 Rue Kepler",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": ["1 Rue Kepler", "63000 Clermont Ferrand", "France"]
+    },
+    "phone": "+33473140888",
+    "display_phone": "+33 4 73 14 08 88",
+    "distance": 967.0140691215859,
+    "reviews": [
+      {
+        "id": "jLg4K463ZQhSa_G0fusjtg",
+        "url": "https://www.yelp.com/biz/le-kepler-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=jLg4K463ZQhSa_G0fusjtg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "En déplacement à Clermont, j'ai atteri dans cette brasserie où le patron vous accueille d'une ferme poignée de main !\n\n\n Cette brasserie vous propose une...",
+        "rating": 4,
+        "time_created": "2011-04-04 05:05:10",
+        "user": {
+          "id": "nqLz8lnzZfSCh7JTkatGPw",
+          "profile_url": "https://www.yelp.com/user_details?userid=nqLz8lnzZfSCh7JTkatGPw",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/_Tq3nOjo6qxmgNY6yC_XKA/o.jpg",
+          "name": "guillaumepujol"
+        }
+      },
+      {
+        "id": "Rh4ucsA_3G6pZddTzCcSyA",
+        "url": "https://www.yelp.com/biz/le-kepler-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=Rh4ucsA_3G6pZddTzCcSyA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Restauration du midi\nPour couper la journée, rien de mieux que de prendre son bon repas dans une ambiance amicale, un service sans reproche. Ce qui m'a...",
+        "rating": 5,
+        "time_created": "2013-04-05 09:35:18",
+        "user": {
+          "id": "C93rGgeKAYvWJCFVY0bDzg",
+          "profile_url": "https://www.yelp.com/user_details?userid=C93rGgeKAYvWJCFVY0bDzg",
+          "image_url": "https://s3-media4.fl.yelpcdn.com/photo/NB8nLP5z2O1GmRM8Bwe5sg/o.jpg",
+          "name": "jacky-douvillez"
+        }
+      },
+      {
+        "id": "tvixWoxV_quZruJp6Jf4zg",
+        "url": "https://www.yelp.com/biz/le-kepler-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=tvixWoxV_quZruJp6Jf4zg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Ador\nEndroit simpas pour bien mange. Service convenable. Serveur aimable. Cuisine agréable. Bien situé.",
+        "rating": 3,
+        "time_created": "2011-02-18 07:32:35",
+        "user": {
+          "id": "lSe99_zlRsmupq5AKKgSCQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=lSe99_zlRsmupq5AKKgSCQ",
+          "image_url": null,
+          "name": "gourmetonton"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vWJttWzIc_61mkmjzuM_zQ",
+    "alias": "brasserie-du-theatre-clermont-ferrand",
+    "name": "Brasserie du Theatre",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/_GmPhbofr_lANVzAMZnSOg/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/brasserie-du-theatre-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 1,
+    "categories": [{ "alias": "brasseries", "title": "Brasseries" }],
+    "rating": 4,
+    "coordinates": {
+      "latitude": 45.7775511375255,
+      "longitude": 3.08281310318767
+    },
+    "transactions": [],
+    "location": {
+      "address1": "6 rue Nestor Perret",
+      "address2": "",
+      "address3": "",
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "6 rue Nestor Perret",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473401164",
+    "display_phone": "+33 4 73 40 11 64",
+    "distance": 2540.207665149292,
+    "reviews": [
+      {
+        "id": "maMtinF3mNA8oQ7xPfpFuQ",
+        "url": "https://www.yelp.com/biz/brasserie-du-theatre-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=maMtinF3mNA8oQ7xPfpFuQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Restaurant située à l'angle de la rue, devanture sobre, mais l'intérieur est sympathiquement décoré de siège rouge, miroirs et tableau en noir et blanc sur...",
+        "rating": 4,
+        "time_created": "2015-05-01 12:17:13",
+        "user": {
+          "id": "_xBm9GFXkTL2N2qNh1hIGQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=_xBm9GFXkTL2N2qNh1hIGQ",
+          "image_url": null,
+          "name": "Parveen A."
+        }
+      }
+    ]
+  },
+  {
+    "id": "QuygqSNM_C9jB4hez4AEOw",
+    "alias": "restaurant-au-cochon-corrézien-clermont-ferrand-3",
+    "name": "Restaurant Au Cochon Corrézien",
+    "image_url": "",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/restaurant-au-cochon-corr%C3%A9zien-clermont-ferrand-3?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 1,
+    "categories": [{ "alias": "brasseries", "title": "Brasseries" }],
+    "rating": 4,
+    "coordinates": { "latitude": 45.767, "longitude": 3.12034 },
+    "transactions": [],
+    "price": "€",
+    "location": {
+      "address1": "305 Rue Oradou",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": ["305 Rue Oradou", "63000 Clermont Ferrand", "France"]
+    },
+    "phone": "+33473264473",
+    "display_phone": "+33 4 73 26 44 73",
+    "distance": 2316.1866423932734,
+    "reviews": [
+      {
+        "id": "C-3A6jpVAxjYKAL4vla8AQ",
+        "url": "https://www.yelp.com/biz/restaurant-au-cochon-corr%C3%A9zien-clermont-ferrand-3?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=C-3A6jpVAxjYKAL4vla8AQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Tres bon rapport qualite prix pour un resto ouvrier\nOn est sur de bien manger\nOuvert uniquement le midi du lundi au vendredi",
+        "rating": 4,
+        "time_created": "2010-09-23 03:15:27",
+        "user": {
+          "id": "uBpGZCeVVhQjK4Q-RMxKUg",
+          "profile_url": "https://www.yelp.com/user_details?userid=uBpGZCeVVhQjK4Q-RMxKUg",
+          "image_url": null,
+          "name": "mask48"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DgrQkoDOaxKi2_6JQyzsbA",
+    "alias": "le-bistrot-de-clermont-clermont-ferrand",
+    "name": "Le Bistrot de Clermont",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/EGiUrEbROTRmrsWMVWlnAA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-bistrot-de-clermont-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 3,
+    "categories": [
+      { "alias": "french", "title": "French" },
+      { "alias": "bistros", "title": "Bistros" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 4,
+    "coordinates": { "latitude": 45.76923372, "longitude": 3.08340053 },
+    "transactions": [],
+    "price": "€€€",
+    "location": {
+      "address1": "25 Avenue De la libération",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "25 Avenue De la libération",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473932222",
+    "display_phone": "+33 4 73 93 22 22",
+    "distance": 3011.1518489049304,
+    "reviews": [
+      {
+        "id": "9s6SEEBmHcOJ1_81UzpnVA",
+        "url": "https://www.yelp.com/biz/le-bistrot-de-clermont-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=9s6SEEBmHcOJ1_81UzpnVA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "trés correct mais pas exceptionnel\nNous y sommes allés un dimanche soir pour un repas en couple. Personne dans le restaurant donc calme et intimité au rdv...",
+        "rating": 4,
+        "time_created": "2014-12-08 04:38:56",
+        "user": {
+          "id": "QMOQs4bCPpSvp7JTBWYMDQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=QMOQs4bCPpSvp7JTBWYMDQ",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/iL3JTmsXFQlcopxf0rgfxA/o.jpg",
+          "name": "L.and.D L."
+        }
+      },
+      {
+        "id": "WFOOsnXss6wt_5uK2Yvx2A",
+        "url": "https://www.yelp.com/biz/le-bistrot-de-clermont-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=WFOOsnXss6wt_5uK2Yvx2A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Un nouveaux brunch\nUn brunch très sympa et copieux, buffet à volonté et un assiette nordique, rien à redire. Bravo aussi pour l'accueil ! Le reste de la...",
+        "rating": 4,
+        "time_created": "2013-01-08 05:41:16",
+        "user": {
+          "id": "DTw1rNQlMG9Y_mAkHBR26Q",
+          "profile_url": "https://www.yelp.com/user_details?userid=DTw1rNQlMG9Y_mAkHBR26Q",
+          "image_url": null,
+          "name": "jeanlucclermont"
+        }
+      },
+      {
+        "id": "uq2TlpmVM0IekOQT5uAX0g",
+        "url": "https://www.yelp.com/biz/le-bistrot-de-clermont-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=uq2TlpmVM0IekOQT5uAX0g&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Bon mais un peu cher enfin tout dépend de votre budget !!\nLe cadre du restaurant est chic mais un peu austère, ça manque de chaleur. L'accueil et le...",
+        "rating": 4,
+        "time_created": "2006-11-17 11:59:48",
+        "user": {
+          "id": "EdmdgeP84CZvNwFfa_VPSA",
+          "profile_url": "https://www.yelp.com/user_details?userid=EdmdgeP84CZvNwFfa_VPSA",
+          "image_url": "https://s3-media1.fl.yelpcdn.com/photo/KwnFVT4wC_o3Ubs1gQt4qQ/o.jpg",
+          "name": "miss-tic-tac"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QQ6HwgJAX-zLCR_LeZ3FzA",
+    "alias": "au-bureau-clermont-ferrand",
+    "name": "Au Bureau",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/RMZNgbHedNzGsnWHYpRrvA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/au-bureau-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 5,
+    "categories": [
+      { "alias": "brasseries", "title": "Brasseries" },
+      { "alias": "pubs", "title": "Pubs" }
+    ],
+    "rating": 3,
+    "coordinates": { "latitude": 45.757947, "longitude": 3.147706 },
+    "transactions": [],
+    "price": "€€",
+    "location": {
+      "address1": "25-29 avenue Ernest Cristal",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "25-29 avenue Ernest Cristal",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473149818",
+    "display_phone": "+33 4 73 14 98 18",
+    "distance": 4236.217186170553,
+    "reviews": [
+      {
+        "id": "R9SZcE6JwVvGCCYNYpq7oA",
+        "url": "https://www.yelp.com/biz/au-bureau-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=R9SZcE6JwVvGCCYNYpq7oA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "J'ai été agréablement surprise par cette brasserie. J'étais déjà venue boire un verre avec des amies et j'avais trouvé le cadre très sympa: maillots de...",
+        "rating": 4,
+        "time_created": "2015-10-26 13:13:36",
+        "user": {
+          "id": "lrI40dP1pKou5fN6_gMeBA",
+          "profile_url": "https://www.yelp.com/user_details?userid=lrI40dP1pKou5fN6_gMeBA",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/PfwWNHB1Q45rRXCJSlkzFA/o.jpg",
+          "name": "Manon A."
+        }
+      },
+      {
+        "id": "dgwa6qJrcaFS7K3eymXmOQ",
+        "url": "https://www.yelp.com/biz/au-bureau-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=dgwa6qJrcaFS7K3eymXmOQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Cuisine simple mais très bonne.\nService agréable en fonction du serveur(se).\nUn peu cher pour de la cuisine simple, de tous les jours .",
+        "rating": 3,
+        "time_created": "2019-02-21 14:59:21",
+        "user": {
+          "id": "PdFZm3teUrEcFLulxa09SQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=PdFZm3teUrEcFLulxa09SQ",
+          "image_url": "https://s3-media1.fl.yelpcdn.com/photo/Hp6kwn9NC1Rq5_CWn34ptg/o.jpg",
+          "name": "Julie G."
+        }
+      },
+      {
+        "id": "3Yx2jNopSa6ftm9qp3l3kA",
+        "url": "https://www.yelp.com/biz/au-bureau-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=3Yx2jNopSa6ftm9qp3l3kA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Un très bon accueil, des serveurs agréables et efficaces, et surtout des plats simples mais de qualité! Je me suis régalée! J'ai passé une formidable soirée...",
+        "rating": 4,
+        "time_created": "2017-06-05 10:45:36",
+        "user": {
+          "id": "L3SHxaSK1RsQplr38JjdTQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=L3SHxaSK1RsQplr38JjdTQ",
+          "image_url": null,
+          "name": "Kassandra L."
+        }
+      }
+    ]
+  },
+  {
+    "id": "STdlpv45Q7mOSI7DhmzBlg",
+    "alias": "bar-de-la-montagne-clermont-ferrand",
+    "name": "Bar de la Montagne",
+    "image_url": "",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/bar-de-la-montagne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 1,
+    "categories": [
+      { "alias": "bistros", "title": "Bistros" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 5,
+    "coordinates": { "latitude": 45.7787158, "longitude": 3.0825125 },
+    "transactions": [],
+    "location": {
+      "address1": "29 Bis Rue du Cheval Blanc",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "29 Bis Rue du Cheval Blanc",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473376339",
+    "display_phone": "+33 4 73 37 63 39",
+    "distance": 2510.392122184439,
+    "reviews": [
+      {
+        "id": "BLcoyjp_Qt--DHbHo4VjFw",
+        "url": "https://www.yelp.com/biz/bar-de-la-montagne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=BLcoyjp_Qt--DHbHo4VjFw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Un bar bien sympatique !\nPetit bar bien sympa, convivial, avec une clientèle d'habitués et de clients occasionnels. J'y ai pris un café avec un ami un jour,...",
+        "rating": 5,
+        "time_created": "2010-12-01 10:25:13",
+        "user": {
+          "id": "hirXQgKnTkVGhq0lZuDH1A",
+          "profile_url": "https://www.yelp.com/user_details?userid=hirXQgKnTkVGhq0lZuDH1A",
+          "image_url": null,
+          "name": "chapterone"
+        }
+      }
+    ]
+  },
+  {
+    "id": "deFS_pv6ihwAudLqIIvByQ",
+    "alias": "le-delios-clermont-ferrand",
+    "name": "Le Delio's",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/vuoTTzJH0lQixt3gcTROUA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-delios-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 3,
+    "categories": [
+      { "alias": "french", "title": "French" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 3.5,
+    "coordinates": { "latitude": 45.76098, "longitude": 3.094269 },
+    "transactions": [],
+    "price": "€",
+    "location": {
+      "address1": "18 bd Winston Churchill",
+      "address2": "",
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "18 bd Winston Churchill",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473759866",
+    "display_phone": "+33 4 73 75 98 66",
+    "distance": 3233.635427434661,
+    "reviews": [
+      {
+        "id": "ArOpx72EWqrvAVji-uXeIA",
+        "url": "https://www.yelp.com/biz/le-delios-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=ArOpx72EWqrvAVji-uXeIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "J'ADORE !!\nUn vrai régal ! on sent vraiment le goût du fait maison! et vu la quantité généreuse, franchement c'est abordable ! je recommande vivement!...",
+        "rating": 5,
+        "time_created": "2014-10-22 04:47:10",
+        "user": {
+          "id": "pf3lTgGn823-3BXowZbQGQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=pf3lTgGn823-3BXowZbQGQ",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/TP_cvItksKJI155b-vp-yQ/o.jpg",
+          "name": "helenetu1"
+        }
+      },
+      {
+        "id": "JAnKmRGnMQVAuTKxDmwPlg",
+        "url": "https://www.yelp.com/biz/le-delios-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=JAnKmRGnMQVAuTKxDmwPlg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Mon préféré.\nAujourd'hui 12 mai , petit repas sympa, cuisse de canard confite avec petites pommes de terre en persillade suivi d'une délicieuse tarte au...",
+        "rating": 5,
+        "time_created": "2014-05-12 14:29:57",
+        "user": {
+          "id": "wChNX6LkH0SITGUycwQj4A",
+          "profile_url": "https://www.yelp.com/user_details?userid=wChNX6LkH0SITGUycwQj4A",
+          "image_url": null,
+          "name": "elisa-jeanne"
+        }
+      },
+      {
+        "id": "jmdm1TvjTXjBAF7RaJ-jDg",
+        "url": "https://www.yelp.com/biz/le-delios-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=jmdm1TvjTXjBAF7RaJ-jDg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "pas à la hauteur de ses prétentions\nun écriteau pompeux à l'entrée annonce que le restaurant propose de la cuisine traditionnelle avec produits frais. la...",
+        "rating": 1,
+        "time_created": "2014-12-08 11:47:35",
+        "user": {
+          "id": "GWBHuHgOJn53MvTZ4QhRQg",
+          "profile_url": "https://www.yelp.com/user_details?userid=GWBHuHgOJn53MvTZ4QhRQg",
+          "image_url": null,
+          "name": "tetradze"
+        }
+      }
+    ]
+  },
+  {
+    "id": "GLc9tuC5-24P1SBCjO5M9w",
+    "alias": "le-jules-verne-clermont-ferrand",
+    "name": "Le Jules Verne",
+    "image_url": "",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-jules-verne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 3,
+    "categories": [
+      { "alias": "fooddeliveryservices", "title": "Food Delivery Services" },
+      { "alias": "bistros", "title": "Bistros" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 3.5,
+    "coordinates": { "latitude": 45.7880875, "longitude": 3.1383438 },
+    "transactions": [],
+    "price": "€€€",
+    "location": {
+      "address1": "40 Rue Jules Verne",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63100",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "40 Rue Jules Verne",
+        "63100 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473232425",
+    "display_phone": "+33 4 73 23 24 25",
+    "distance": 2001.8607498265508,
+    "reviews": [
+      {
+        "id": "XIrN2jJ6bS5HBF7fkSDQUg",
+        "url": "https://www.yelp.com/biz/le-jules-verne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=XIrN2jJ6bS5HBF7fkSDQUg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Rapide, bien servi, clientèle de cadre, bonne ambiance, prix moyen, desserts frais maison, une bonne brasserie, je recommande.",
+        "rating": 5,
+        "time_created": "2012-11-18 05:55:15",
+        "user": {
+          "id": "q-lPTqE6UvfTtpKDbbzecg",
+          "profile_url": "https://www.yelp.com/user_details?userid=q-lPTqE6UvfTtpKDbbzecg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/wQlro2m6Heg9kcrd3tyD6A/o.jpg",
+          "name": "Sam T."
+        }
+      },
+      {
+        "id": "0g6XSiwrKLyMuuLLLFRWSQ",
+        "url": "https://www.yelp.com/biz/le-jules-verne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=0g6XSiwrKLyMuuLLLFRWSQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Un restaurant de type brasserie au Brézet, avec beaucoup de monde à midi (ce qui est plutôt bon signe). Les plats sont assez copieux et bons au goût.",
+        "rating": 3,
+        "time_created": "2011-03-11 03:19:08",
+        "user": {
+          "id": "CdeTkz4VPRcizLO5x4vfDA",
+          "profile_url": "https://www.yelp.com/user_details?userid=CdeTkz4VPRcizLO5x4vfDA",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/rPdUAR8i6NaHF8OqeAfwoA/o.jpg",
+          "name": "dafff"
+        }
+      },
+      {
+        "id": "LCdUwmVgfvMubpwZUAuYIQ",
+        "url": "https://www.yelp.com/biz/le-jules-verne-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=LCdUwmVgfvMubpwZUAuYIQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Une brasserie ciblée pour la pause déjeuner des actifs de 17 à 77 ans.\nUne première expérience dans cette établissement qui ne désemplit pas à l'heure du...",
+        "rating": 3,
+        "time_created": "2011-10-27 11:57:03",
+        "user": {
+          "id": "DSwIJW9eJmBdv9OTsqsjnQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=DSwIJW9eJmBdv9OTsqsjnQ",
+          "image_url": null,
+          "name": "L D."
+        }
+      }
+    ]
+  },
+  {
+    "id": "4_ywgCFUAVcY8Pw6zMM-1A",
+    "alias": "brasserie-des-volcans-saint-ours-les-roches",
+    "name": "Brasserie des Volcans",
+    "image_url": "",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/brasserie-des-volcans-saint-ours-les-roches?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 1,
+    "categories": [{ "alias": "brasseries", "title": "Brasseries" }],
+    "rating": 4,
+    "coordinates": { "latitude": 45.813602, "longitude": 2.939818 },
+    "transactions": [],
+    "location": {
+      "address1": "2 route de Mazayes",
+      "address2": "",
+      "address3": null,
+      "city": "Saint-Ours-les Roches",
+      "zip_code": "63230",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "2 route de Mazayes",
+        "63230 Saint-Ours-les Roches",
+        "France"
+      ]
+    },
+    "phone": "+33473197000",
+    "display_phone": "+33 4 73 19 70 00",
+    "distance": 13711.517234039082,
+    "reviews": [
+      {
+        "id": "WP51V5gov6hfsLakOtGP_Q",
+        "url": "https://www.yelp.com/biz/brasserie-des-volcans-saint-ours-les-roches?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=WP51V5gov6hfsLakOtGP_Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Ce restaurant sert de la cuisine locale, de la cuisine auvergnate.\nLes plats sont tout à fait correctes.\nLe personnel est aimable \nMais c'est un peu cher...",
+        "rating": 4,
+        "time_created": "2018-08-15 01:57:36",
+        "user": {
+          "id": "XQar8tJJMFb0NJ7p5vCygA",
+          "profile_url": "https://www.yelp.com/user_details?userid=XQar8tJJMFb0NJ7p5vCygA",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/cR-5zdKe5SN0dIxfkJYfkA/o.jpg",
+          "name": "Boran B."
+        }
+      }
+    ]
+  },
+  {
+    "id": "4_huDGTuINLBEVfH0ouPwA",
+    "alias": "baths-clermont-ferrand",
+    "name": "Bath's",
+    "image_url": "",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/baths-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 2,
+    "categories": [
+      { "alias": "french", "title": "French" },
+      { "alias": "bistros", "title": "Bistros" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 3,
+    "coordinates": { "latitude": 45.779332, "longitude": 3.082616 },
+    "transactions": [],
+    "location": {
+      "address1": "Place Saint-Pierre",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont-Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "Place Saint-Pierre",
+        "63000 Clermont-Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473312322",
+    "display_phone": "+33 4 73 31 23 22",
+    "distance": 2478.1906759669064,
+    "reviews": [
+      {
+        "id": "12M3Jvl4TlPBXj6rTFLLDg",
+        "url": "https://www.yelp.com/biz/baths-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=12M3Jvl4TlPBXj6rTFLLDg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Bon accueil et salle cosy. Cuisine avec de bons produits mais petit bémol sur la préparation.  Cela reste classique sans trop d'originalité. Les menus...",
+        "rating": 3,
+        "time_created": "2016-03-27 14:01:52",
+        "user": {
+          "id": "P00dUlPJYKpBBhyZzssc2Q",
+          "profile_url": "https://www.yelp.com/user_details?userid=P00dUlPJYKpBBhyZzssc2Q",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/b8Q9bUCUUmvEXctldXVF4w/o.jpg",
+          "name": "Laetitia D."
+        }
+      },
+      {
+        "id": "1LqFCQ5UmTHACxaCKqZewA",
+        "url": "https://www.yelp.com/biz/baths-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=1LqFCQ5UmTHACxaCKqZewA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Bath's (annule) et remplace Danièle Bath\nLe dicton dit qu'il faut \"tuer le père\". En l'espèce, le fils a \"tué\" sa mère - pacifiquement j'espère - et a...",
+        "rating": 3,
+        "time_created": "2012-06-17 07:09:10",
+        "user": {
+          "id": "DSwIJW9eJmBdv9OTsqsjnQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=DSwIJW9eJmBdv9OTsqsjnQ",
+          "image_url": null,
+          "name": "L D."
+        }
+      }
+    ]
+  },
+  {
+    "id": "kWJEFiexDu3cpoNgmSSmCA",
+    "alias": "le-richelieu-clermont-ferrand",
+    "name": "Le Richelieu",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ydGfV2_vOrc-mUrBZGVuog/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/le-richelieu-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 6,
+    "categories": [
+      { "alias": "brasseries", "title": "Brasseries" },
+      { "alias": "bistros", "title": "Bistros" }
+    ],
+    "rating": 1.5,
+    "coordinates": { "latitude": 45.7754, "longitude": 3.08192 },
+    "transactions": [],
+    "location": {
+      "address1": "44 place de Jaude",
+      "address2": null,
+      "address3": null,
+      "city": "Clermont Ferrand",
+      "zip_code": "63000",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "44 place de Jaude",
+        "63000 Clermont Ferrand",
+        "France"
+      ]
+    },
+    "phone": "+33473292424",
+    "display_phone": "+33 4 73 29 24 24",
+    "distance": 2709.797919728026,
+    "reviews": [
+      {
+        "id": "YUHDvcm3mAK1hN-NPTaACw",
+        "url": "https://www.yelp.com/biz/le-richelieu-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=YUHDvcm3mAK1hN-NPTaACw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Le standing est le créneau du  Rich'  : restaurant à l'étage dirigé par le chef Anglard, cadre design et chaleureux et mention spécial au distributeur...",
+        "rating": 2,
+        "time_created": "2008-09-20 02:24:58",
+        "user": {
+          "id": "l0EIAXZWa4YYOYfL0foTdg",
+          "profile_url": "https://www.yelp.com/user_details?userid=l0EIAXZWa4YYOYfL0foTdg",
+          "image_url": "https://s3-media2.fl.yelpcdn.com/photo/9siu0nmLZYG6pAv53HPh5A/o.jpg",
+          "name": "benjidecassis"
+        }
+      },
+      {
+        "id": "pE8hLm8tzUBCaHpkH8umfA",
+        "url": "https://www.yelp.com/biz/le-richelieu-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=pE8hLm8tzUBCaHpkH8umfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Un endroit parfait pour être pris pour une . Le lieu est trés cher (3 euros la toute petite pression), alors que les prestations y sont mauvaises (chocolat...",
+        "rating": 1,
+        "time_created": "2012-01-01 01:57:28",
+        "user": {
+          "id": "TJtR3dV_45Tb5vDmLEShGQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=TJtR3dV_45Tb5vDmLEShGQ",
+          "image_url": "https://s3-media3.fl.yelpcdn.com/photo/w_NjiGG-eQ7i20tEST5NBQ/o.jpg",
+          "name": "AnthoCorneto"
+        }
+      },
+      {
+        "id": "9X8PLC8Znnc3WFdiaea3yw",
+        "url": "https://www.yelp.com/biz/le-richelieu-clermont-ferrand?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=9X8PLC8Znnc3WFdiaea3yw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Que dire de cet endroit? À part que leur carte est facile, prix chers, service peu professionnel.. Je suis sidéré par le manque de professionnalisme de...",
+        "rating": 1,
+        "time_created": "2013-04-09 22:15:35",
+        "user": {
+          "id": "xdahQPz5gzeLGB0HgjyLwQ",
+          "profile_url": "https://www.yelp.com/user_details?userid=xdahQPz5gzeLGB0HgjyLwQ",
+          "image_url": null,
+          "name": "antoinesaint-joanis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1sqQUYsRtxEgkj0uYiiK1w",
+    "alias": "brasserie-le-zénith-cournon-d-auvergne-4",
+    "name": "Brasserie le Zénith",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/dITGTNccgTBoULUkDu5O-g/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/brasserie-le-z%C3%A9nith-cournon-d-auvergne-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+    "review_count": 1,
+    "categories": [
+      { "alias": "french", "title": "French" },
+      { "alias": "brasseries", "title": "Brasseries" }
+    ],
+    "rating": 3,
+    "coordinates": { "latitude": 45.742323, "longitude": 3.157979 },
+    "transactions": [],
+    "location": {
+      "address1": "39 rue Sarliève",
+      "address2": null,
+      "address3": null,
+      "city": "Cournon d'Auvergne",
+      "zip_code": "63800",
+      "country": "FR",
+      "state": "63",
+      "display_address": [
+        "39 rue Sarliève",
+        "63800 Cournon d'Auvergne",
+        "France"
+      ]
+    },
+    "phone": "+33473843518",
+    "display_phone": "+33 4 73 84 35 18",
+    "distance": 6100.278910322075,
+    "reviews": [
+      {
+        "id": "nh7vGYAIjgSAyNJ1zFH6kQ",
+        "url": "https://www.yelp.com/biz/brasserie-le-z%C3%A9nith-cournon-d-auvergne-4?adjust_creative=OUg8qQgRikF-ySoFzuqUzQ&hrid=nh7vGYAIjgSAyNJ1zFH6kQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=OUg8qQgRikF-ySoFzuqUzQ",
+        "text": "Salade auvergnate choisie et pas déçu \nBelles tranches de fromage auvergnat ainsi que du magret de canard\n\nPlat porc sauce barbecue \nViande tendre et une...",
+        "rating": 3,
+        "time_created": "2016-01-08 07:24:55",
+        "user": {
+          "id": "gCsPG3Vf5230UwM0tpoAGA",
+          "profile_url": "https://www.yelp.com/user_details?userid=gCsPG3Vf5230UwM0tpoAGA",
+          "image_url": null,
+          "name": "Dominique C."
+        }
+      }
+    ]
+  }
+]
