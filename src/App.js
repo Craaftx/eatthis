@@ -70,7 +70,7 @@ class App extends React.Component {
         <MyContext.Provider
           value={{ map: this.state.map, updateMap: this.state.setMap }}
         >
-          <Results restaurants={jsonRestaurantList.businesses} />
+          <Results restaurants={jsonRestaurantList} />
           <Map>
             <GoogleMaps />
             <Mask />
