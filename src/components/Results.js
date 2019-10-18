@@ -34,17 +34,19 @@ export default class Results extends React.Component {
   }
 
   render() {
+    const { restaurants } = this.props;
+    const { map } = this.context;
     return (
       <Infos>
         <InfosTitle>Autour de vous</InfosTitle>
-        {this.props.restaurants.map((data, index) => {
+        {restaurants.map((data, index) => {
           const restaurant = new Restaurant(data);
           return (
             <RestaurantCard
               key={index}
               restaurant={restaurant}
               event={() => {
-                this.addMarker(restaurant, this.context.map);
+                this.addMarker(restaurant, map);
               }}
             />
           );
@@ -55,3 +57,7 @@ export default class Results extends React.Component {
 }
 
 Results.contextType = MyContext;
+
+Results.propTypes = {
+  restaurants: PropTypes.array,
+};
