@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Stars } from './Stars';
+import PropTypes from 'prop-types';
+import Stars from './Stars';
+import Restaurant from '../model/Restaurant';
 
-const Restaurant = styled.div`
+const Wrapper = styled.div`
   display: flex;
   border-radius: 10px;
   background-color: #ffffff;
@@ -57,7 +59,7 @@ const RestaurantDescriptionFood = styled.div`
 
 const RestaurantCard = ({ restaurant, event }) => {
   return (
-    <Restaurant onClick={event}>
+    <Wrapper onClick={event}>
       <RestaurantDescription>
         <h3>{restaurant.name}</h3>
         <small>
@@ -75,8 +77,13 @@ const RestaurantCard = ({ restaurant, event }) => {
         </RestaurantDescriptionFood>
       </RestaurantDescription>
       <RestaurantImage src={restaurant.imageUrl} alt={restaurant.name} />
-    </Restaurant>
+    </Wrapper>
   );
 };
 
 export default RestaurantCard;
+
+RestaurantCard.propTypes = {
+  restaurant: PropTypes.objectOf(Restaurant).isRequired,
+  event: PropTypes.func.isRequired,
+};

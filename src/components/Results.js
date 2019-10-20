@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 import Restaurant from "../model/Restaurant";
 import RestaurantCard from "./RestaurantCard";
 import MyContext from "../utils/MyContext";
@@ -22,7 +23,8 @@ const InfosTitle = styled.h2`
 `;
 
 export default class Results extends React.Component {
-  static addMarker(restaurant, map) {
+  addMarker(restaurant) {
+    const { map } = this.context;
     const coordinates = { lat: restaurant.latitude, lng: restaurant.longitude };
     const GoogleMapsMarker = new window.google.maps.Marker({
       position: coordinates,
@@ -31,14 +33,16 @@ export default class Results extends React.Component {
       map,
       title: "Hello World!"
     });
+    console.log(GoogleMapsMarker);
   }
 
   render() {
     const { restaurants } = this.props;
-    const { map } = this.context;
     return (
       <Infos>
-        <InfosTitle>Autour de vous</InfosTitle>
+        <InfosTitle>
+          Autour de vous
+        </InfosTitle>
         {restaurants.map((data, index) => {
           const restaurant = new Restaurant(data);
           return (
@@ -46,7 +50,7 @@ export default class Results extends React.Component {
               key={index}
               restaurant={restaurant}
               event={() => {
-                this.addMarker(restaurant, map);
+                this.addMarker(restaurant);
               }}
             />
           );
@@ -59,5 +63,5 @@ export default class Results extends React.Component {
 Results.contextType = MyContext;
 
 Results.propTypes = {
-  restaurants: PropTypes.array,
+  restaurants: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

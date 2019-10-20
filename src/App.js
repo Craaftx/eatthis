@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import MyContext from "./utils/MyContext";
-import { GoogleMaps } from "./components/GoogleMaps";
-import { Menu } from "./components/Menu";
+import GoogleMaps from "./components/GoogleMaps";
+import Menu from "./components/Menu";
 import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
 

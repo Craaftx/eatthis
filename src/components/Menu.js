@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -48,7 +49,7 @@ const MenuItem = styled.div`
   }
 `;
 
-export const Menu = ({ elements }) => {
+const Menu = ({ elements }) => {
   return (
     <Wrapper>
       {elements &&
@@ -60,3 +61,9 @@ export const Menu = ({ elements }) => {
     </Wrapper>
   );
 };
+
+Menu.propTypes = {
+  elements: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+export default Menu;

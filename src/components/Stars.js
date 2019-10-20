@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const StarsWrapper = styled.div`
@@ -9,13 +10,13 @@ const StarsWrapper = styled.div`
   }
 `;
 
-const filledStar = key => <i key={key} className="lni-star-filled"></i>;
-const emptyStar = key => <i key={key} className="lni-star"></i>;
+const filledStar = key => <i key={key} className="lni-star-filled" />;
+const emptyStar = key => <i key={key} className="lni-star" />;
 
-export const Stars = ({ number }) => {
+const Stars = ({ number }) => {
   const numberRounded = Math.round(number);
-  let result = [];
-  for (let index = 0; index < 5; index++) {
+  const result = [];
+  for (let index = 0; index < 5; index += 1) {
     if (index < numberRounded) {
       result.push(filledStar(index));
     } else {
@@ -24,3 +25,9 @@ export const Stars = ({ number }) => {
   }
   return <StarsWrapper>{result}</StarsWrapper>;
 };
+
+Stars.propTypes = {
+  number: PropTypes.number.isRequired
+};
+
+export default Stars;
