@@ -52,23 +52,24 @@ class App extends React.Component {
       { icon: "lni-coffee-cup" },
       { icon: "lni-more" }
     ];
+    
+    this.state = {
+      map: null,
+      updateMap: this.updateMap
+    };
   }
 
-  setMap = map => {
+  updateMap = map => {
     this.setState({ map });
   };
 
-  state = {
-    map: null,
-    setMap: this.setMap
-  };
-
   render() {
+    const { map, updateMap } = this.state;
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
         <MyContext.Provider
-          value={{ map: this.state.map, updateMap: this.state.setMap }}
+          value={{ map, updateMap }}
         >
           <Results restaurants={jsonRestaurantList} />
           <Map>
