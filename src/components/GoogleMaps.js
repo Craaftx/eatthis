@@ -27,6 +27,7 @@ class GoogleMaps extends React.Component {
 
   handleGoogleClientLoad = (callback) => {
     const script = document.createElement("script");
+    const { updateGoogleScript } = this.context;
     script.setAttribute(
       "src",
       GoogleApi({
@@ -36,7 +37,8 @@ class GoogleMaps extends React.Component {
     );
     script.onreadystatechange = callback;
     script.onload = callback;
-    document.body.appendChild(script);
+    updateGoogleScript(this.htmlMap);
+    document.head.appendChild(script);
   }
   
   handleLocationError(browserHasGeolocation, infoWindow, pos) {

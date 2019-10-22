@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from 'prop-types';
 import Restaurant from "../model/Restaurant";
 import RestaurantCard from "./RestaurantCard";
+import RestaurantDetails from "./RestaurantDetails";
 import MyContext from "../utils/MyContext";
 import marker from "../marker.png";
 
@@ -43,11 +44,12 @@ export default class Results extends React.Component {
         <InfosTitle>
           Autour de vous
         </InfosTitle>
-        {restaurants.map((data, index) => {
+        <RestaurantDetails restaurant={new Restaurant(restaurants[0])}/>
+        {restaurants.map((data) => {
           const restaurant = new Restaurant(data);
           return (
             <RestaurantCard
-              key={index}
+              key={restaurant.id}
               restaurant={restaurant}
               event={() => {
                 this.addMarker(restaurant);

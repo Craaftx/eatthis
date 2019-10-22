@@ -33,10 +33,10 @@ const RestaurantDescription = styled.div`
 `;
 
 const RestaurantImage = styled.img`
-  flex: 1
-  border-radius: 5px
+  flex: 1;
+  border-radius: 5px;
   height: 160px;
-  max-width: 120px;
+  max-width: 100px;
   object-fit: cover;
 `;
 

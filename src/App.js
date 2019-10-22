@@ -54,9 +54,15 @@ class App extends React.Component {
     ];
     
     this.state = {
+      googleScript: null,
+      updateGoogleScript: this.updateGoogleScript,
       map: null,
       updateMap: this.updateMap
     };
+  }
+
+  updateGoogleScript = googleScript => {
+    this.setState({ googleScript });
   }
 
   updateMap = map => {
@@ -64,12 +70,12 @@ class App extends React.Component {
   };
 
   render() {
-    const { map, updateMap } = this.state;
+    const { map, updateMap, googleScript, updateGoogleScript } = this.state;
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
         <MyContext.Provider
-          value={{ map, updateMap }}
+          value={{ map, updateMap, googleScript, updateGoogleScript }}
         >
           <Results restaurants={jsonRestaurantList} />
           <Map>

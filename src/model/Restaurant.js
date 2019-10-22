@@ -1,6 +1,4 @@
-// import fetchJsonp from "fetch-jsonp";
-// import config from "../config";
-// import Review from "./Review";
+import Review from "./Review";
 import placeholder from "../placeholder.jpg";
 
 export default class Restaurant {
@@ -15,20 +13,10 @@ export default class Restaurant {
     this._latitude = data.coordinates.latitude;
     this._longitude = data.coordinates.longitude;
     this._displayAddress = data.location.display_address.join(" ");
-    // this._reviews = this.getReviewsFromApi().reviews.map(
-    //   review => new Review(review)
-    // );
+    this._reviews = data.reviews.map(
+      review => new Review(review)
+    );
   }
-
-  // async getReviewsFromApi() {
-  //   const response = await fetchJsonp(`https://api.yelp.com/v3/businesses/${this.id}/reviews?locale=fr_FR`, { 
-  //     headers: new Headers({
-  //       "Authorization": `Bearer ${config.yelp.apiKey}`,
-  //     }),
-  //   });
-  //   console.log(response);
-  //   return await response.json();
-  // }
 
   get id() {
     return this._id;
@@ -68,5 +56,9 @@ export default class Restaurant {
 
   get displayAddress() {
     return this._displayAddress;
+  }
+
+  get reviews() {
+    return this._reviews;
   }
 }
