@@ -47,7 +47,7 @@ const ReviewCard = ({ review }) => {
         <ReviewImage src={review.imageUrl} alt={review.name} />
         <ReviewUsername>{review.name}</ReviewUsername>
         <StarsWrapper>
-          <Stars number={review.rating} />
+          <Stars number={review.rating} isFulled/>
         </StarsWrapper>
       </ReviewUser>
       <ReviewDetails>

@@ -13,21 +13,25 @@ const StarsWrapper = styled.div`
 const filledStar = key => <i key={key} className="lni-star-filled" />;
 const emptyStar = key => <i key={key} className="lni-star" />;
 
-const Stars = ({ number }) => {
+const Stars = ({ number, isFulled }) => {
   const numberRounded = Math.round(number);
   const result = [];
   for (let index = 0; index < 5; index += 1) {
     if (index < numberRounded) {
       result.push(filledStar(index));
     } else {
-      result.push(emptyStar(index));
+      const condition = isFulled;
+      if(condition) {
+        result.push(emptyStar(index));
+      }
     }
   }
   return <StarsWrapper>{result}</StarsWrapper>;
 };
 
 Stars.propTypes = {
-  number: PropTypes.number.isRequired
+  number: PropTypes.number.isRequired,
+  isFulled: PropTypes.bool.isRequired,
 };
 
 export default Stars;

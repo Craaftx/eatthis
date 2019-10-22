@@ -68,7 +68,7 @@ const RestaurantCard = ({ restaurant, event }) => {
           0m de votre position
         </small>
         <RestaurantRating>
-          <Stars number={restaurant.rating} />
+          <Stars number={restaurant.rating} isFulled/>
           <small>{restaurant.reviewCount} avis</small>
         </RestaurantRating>
         <RestaurantDescriptionFood>
