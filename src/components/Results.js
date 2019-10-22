@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Restaurant from "../model/Restaurant";
 import RestaurantCard from "./RestaurantCard";
 import RestaurantDetails from "./RestaurantDetails";
 import MyContext from "../utils/MyContext";
 import marker from "../marker.png";
+import StarFilter from "./StarFilter";
 
-const Infos = styled.div`
+const Wrapper = styled.div`
   z-index: 10;
   position: absolute;
   right: -20px;
@@ -18,12 +19,46 @@ const Infos = styled.div`
   overflow-y: auto;
 `;
 
-const InfosTitle = styled.h2`
+const ResultsTitle = styled.h2`
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 `;
 
-export default class Results extends React.Component {
+const ResultsFilter = styled.div`
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 15px 20px 15px 25px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+`
+
+class Results extends React.Component {
+  constructor(props) {
+    super(props);
+    this.filters = {
+      default: () => {
+        return true;
+      },
+      stars: (element, number) => {
+        return element.rating > number;
+      },
+    } 
+    this.state = {
+      currentRestaurant: null,
+      currentFilter: this.filters.default,
+      updateCurrentFilter: this.updateCurrentFilter,
+      updateCurrentRestaurant: this.updateCurrentRestaurant
+    };
+  }
+
+  updateCurrentFilter = currentFilter => {
+    this.setState({ currentFilter });
+  };
+
+  updateCurrentRestaurant = currentRestaurant => {
+    this.setState({ currentRestaurant });
+  };
+
   addMarker(restaurant) {
     const { map } = this.context;
     const coordinates = { lat: restaurant.latitude, lng: restaurant.longitude };
@@ -34,30 +69,38 @@ export default class Results extends React.Component {
       map,
       title: "Hello World!"
     });
-    console.log(GoogleMapsMarker);
+    const latLng = GoogleMapsMarker.getPosition();
+    map.setCenter(latLng);
   }
 
   render() {
+    const { currentRestaurant, updateCurrentRestaurant, currentFilter, updateCurrentFilter } = this.state;
     const { restaurants } = this.props;
     return (
-      <Infos>
-        <InfosTitle>
-          Autour de vous
-        </InfosTitle>
-        <RestaurantDetails restaurant={new Restaurant(restaurants[0])}/>
-        {restaurants.map((data) => {
+      <Wrapper>
+        <ResultsTitle>Autour de vous</ResultsTitle>
+        <ResultsFilter>
+          <small>Filtrer les résultats</small>
+          <StarFilter number={2} onClick={() => {
+            updateCurrentFilter(this.filters.stars(2));
+          }} />
+        </ResultsFilter>
+        {restaurants.filter(currentFilter).map(data => {
           const restaurant = new Restaurant(data);
-          return (
+          return currentRestaurant && currentRestaurant === restaurant.id ? (
+            <RestaurantDetails restaurant={restaurant} />
+          ) : (
             <RestaurantCard
               key={restaurant.id}
               restaurant={restaurant}
               event={() => {
                 this.addMarker(restaurant);
+                updateCurrentRestaurant(restaurant.id);
               }}
             />
           );
         })}
-      </Infos>
+      </Wrapper>
     );
   }
 }
@@ -65,5 +108,7 @@ export default class Results extends React.Component {
 Results.contextType = MyContext;
 
 Results.propTypes = {
-  restaurants: PropTypes.arrayOf(PropTypes.object).isRequired,
+  restaurants: PropTypes.arrayOf(PropTypes.object).isRequired
 };
+
+export default Results;
