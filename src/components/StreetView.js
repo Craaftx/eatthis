@@ -17,13 +17,8 @@ class StreetView extends React.Component {
   componentDidMount() {
     const { latitude, longitude } = this.props;
     // eslint-disable-next-line no-new
-    const google = window.google = window.google ? window.google : {}
-    new google.maps.StreetViewPanorama(document.getElementById("pano"), {
-      position: { lat: latitude, lng: longitude },
-      pov: {
-        heading: 34,
-        pitch: 10
-      }
+    new window.google.maps.StreetViewPanorama(this.htmlStreetView.current, {
+      position: { lat: latitude, lng: longitude }
     });
   }
 

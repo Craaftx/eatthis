@@ -68,6 +68,11 @@ const RestaurantReviews = styled.div`
   border-top: 1px solid #efefef;
 `;
 
+const StreetViewWrapper = styled.div`
+  width: 100%;
+  height: 260px;
+`;
+
 class RestaurantDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -99,7 +104,12 @@ class RestaurantDetails extends React.Component {
         </RestaurantHeader>
         <RestaurantStreetView>
           <h3>Street View</h3>
-          <StreetView latitude={restaurant.latitude} longitude={restaurant.longitude} />
+          <StreetViewWrapper>
+            <StreetView
+              latitude={restaurant.latitude}
+              longitude={restaurant.longitude}
+            />
+          </StreetViewWrapper>
         </RestaurantStreetView>
         <RestaurantReviews>
           <h3>

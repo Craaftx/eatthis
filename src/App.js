@@ -128,7 +128,7 @@ class App extends React.Component {
       <Wrapper>
         <Menu elements={this.menuElements} />
         {googleScriptLoaded ? (
-          <MyContext.Provider value={{ map, updateMap, googleScriptLoaded }}>
+          <MyContext.Provider value={{ map, updateMap }}>
             <Results restaurants={jsonRestaurantList} />
             <Map>
               <GoogleMaps />
