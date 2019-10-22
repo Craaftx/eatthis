@@ -1,5 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import GoogleApi from "./utils/GoogleApi";
+import config from "./config";
 import MyContext from "./utils/MyContext";
 import GoogleMaps from "./components/GoogleMaps";
 import Menu from "./components/Menu";
@@ -39,6 +41,36 @@ const Mask = styled.div`
   pointer-events: none;
 `;
 
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Loading = styled.div`
+  position: relative;
+  margin-left: 100px;
+  width: calc(100% - 100px);
+  height: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #dfdfee;
+    border-top: 2px solid #65359b;
+  }
+  animation: ${rotate} 1s linear infinite;
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -52,37 +84,60 @@ class App extends React.Component {
       { icon: "lni-coffee-cup" },
       { icon: "lni-more" }
     ];
-    
+
     this.state = {
-      googleScript: null,
-      updateGoogleScript: this.updateGoogleScript,
+      googleScriptLoaded: false,
+      updateGoogleScriptStatus: this.updateGoogleScriptStatus,
       map: null,
       updateMap: this.updateMap
     };
   }
 
-  updateGoogleScript = googleScript => {
-    this.setState({ googleScript });
+  componentDidMount() {
+    const { updateGoogleScriptStatus } = this.state;
+    this.handleGoogleClientLoad(() => {
+      updateGoogleScriptStatus(true);
+    });
   }
+
+  handleGoogleClientLoad = callback => {
+    const script = document.createElement("script");
+    script.setAttribute(
+      "src",
+      GoogleApi({
+        apiKey: config.google.apiKey,
+        libraries: config.google.libraries
+      })
+    );
+    script.onreadystatechange = callback;
+    script.onload = callback;
+    document.head.appendChild(script);
+  };
+
+  updateGoogleScriptStatus = googleScriptLoaded => {
+    this.setState({ googleScriptLoaded });
+  };
 
   updateMap = map => {
     this.setState({ map });
   };
 
   render() {
-    const { map, updateMap, googleScript, updateGoogleScript } = this.state;
+    const { map, updateMap, googleScriptLoaded } = this.state;
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
-        <MyContext.Provider
-          value={{ map, updateMap, googleScript, updateGoogleScript }}
-        >
-          <Results restaurants={jsonRestaurantList} />
-          <Map>
-            <GoogleMaps />
-            <Mask />
-          </Map>
-        </MyContext.Provider>
+        {googleScriptLoaded ? (
+          <MyContext.Provider value={{ map, updateMap, googleScriptLoaded }}>
+            <Results restaurants={jsonRestaurantList} />
+            <Map>
+              <GoogleMaps />
+              <Mask />
+            </Map>
+          </MyContext.Provider>
+        ) : (
+          <Loading />
+        )}
       </Wrapper>
     );
   }

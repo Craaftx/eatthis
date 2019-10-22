@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import GoogleApi from "../utils/GoogleApi";
-import config from "../config";
 import googleMapsTheme from "../utils/GoogleMapsTheme";
 import MyContext from "../utils/MyContext";
 import usermarker from "../usermarker.png";
@@ -20,25 +18,7 @@ class GoogleMaps extends React.Component {
   }
 
   componentDidMount() {
-    this.handleGoogleClientLoad(() => {
-      this.initMap(this.context);
-    });
-  }
-
-  handleGoogleClientLoad = (callback) => {
-    const script = document.createElement("script");
-    const { updateGoogleScript } = this.context;
-    script.setAttribute(
-      "src",
-      GoogleApi({
-        apiKey: config.google.apiKey,
-        libraries: config.google.libraries
-      })
-    );
-    script.onreadystatechange = callback;
-    script.onload = callback;
-    updateGoogleScript(this.htmlMap);
-    document.head.appendChild(script);
+    this.initMap(this.context);
   }
   
   handleLocationError(browserHasGeolocation, infoWindow, pos) {
