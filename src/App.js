@@ -86,6 +86,9 @@ class App extends React.Component {
     ];
 
     this.state = {
+      markers: [],
+      addMarker: this.addMarker,
+      removeMarker: this.removeMarker,
       googleScriptLoaded: false,
       updateGoogleScriptStatus: this.updateGoogleScriptStatus,
       map: null,
@@ -99,6 +102,32 @@ class App extends React.Component {
       updateGoogleScriptStatus(true);
     });
   }
+
+  addMarker = marker => {
+    const { markers } = this.state;
+    this.setState({ markers: [...markers, marker] });
+  };
+
+  removeMarker = markerId => {
+    this.setState(prevState => ({
+      markers: prevState.markers.filter(
+        currentMarker => { 
+          if(Object.keys(currentMarker)[0] === markerId) {
+            currentMarker[`${Object.keys(currentMarker)[0]}`].setMap(null);
+          }
+          return Object.keys(currentMarker)[0] !== markerId
+        }
+      )
+    }));
+  };
+
+  updateGoogleScriptStatus = googleScriptLoaded => {
+    this.setState({ googleScriptLoaded });
+  };
+
+  updateMap = map => {
+    this.setState({ map });
+  };
 
   handleGoogleClientLoad = callback => {
     const script = document.createElement("script");
@@ -114,21 +143,22 @@ class App extends React.Component {
     document.head.appendChild(script);
   };
 
-  updateGoogleScriptStatus = googleScriptLoaded => {
-    this.setState({ googleScriptLoaded });
-  };
-
-  updateMap = map => {
-    this.setState({ map });
-  };
-
   render() {
-    const { map, updateMap, googleScriptLoaded } = this.state;
+    const {
+      map,
+      updateMap,
+      googleScriptLoaded,
+      markers,
+      addMarker,
+      removeMarker
+    } = this.state;
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
         {googleScriptLoaded ? (
-          <MyContext.Provider value={{ map, updateMap }}>
+          <MyContext.Provider
+            value={{ map, updateMap, markers, addMarker, removeMarker }}
+          >
             <Results restaurants={jsonRestaurantList} />
             <Map>
               <GoogleMaps />

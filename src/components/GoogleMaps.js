@@ -32,7 +32,7 @@ class GoogleMaps extends React.Component {
   }
 
   initMap() {
-    const { updateMap } = this.context;
+    const { updateMap, addMarker } = this.context;
 
     this.map = new window.google.maps.Map(this.htmlMap.current, {
       center: { lat: -34.397, lng: 150.644 },
@@ -53,12 +53,13 @@ class GoogleMaps extends React.Component {
           };
           this.map.setCenter(pos);
           // eslint-disable-next-line no-new
-          new window.google.maps.Marker({
+          const userMarker = new window.google.maps.Marker({
             position: pos,
             animation: window.google.maps.Animation.DROP,
             icon: usermarker,
             map: this.map,
           });
+          addMarker({"userMarker": userMarker});
         },
         () => {
           this.handleLocationError(true, this.infoWindow, this.map.getCenter());

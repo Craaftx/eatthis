@@ -39,7 +39,7 @@ class Results extends React.Component {
       default: () => {
         return true;
       },
-      stars:  number => element => element.rating === number
+      stars: number => element => element.rating === number
     };
     this.state = {
       currentRestaurant: null,
@@ -57,6 +57,15 @@ class Results extends React.Component {
     this.setState({ currentRestaurant });
   };
 
+  updateMarkers = (restaurant, lastMarker) => {
+    const { currentRestaurant } = this.state;
+    const { addMarker, removeMarker } = this.context;
+    if (currentRestaurant) {
+      removeMarker(`${currentRestaurant.id}`);
+    }
+    addMarker({ [`${restaurant.id}`]: lastMarker });
+  };
+
   addMarker(restaurant) {
     const { map } = this.context;
     const coordinates = { lat: restaurant.latitude, lng: restaurant.longitude };
@@ -68,6 +77,7 @@ class Results extends React.Component {
       title: "Hello World!"
     });
     const latLng = GoogleMapsMarker.getPosition();
+    this.updateMarkers(restaurant, GoogleMapsMarker);
     map.setCenter(latLng);
   }
 
@@ -107,7 +117,7 @@ class Results extends React.Component {
         </ResultsFilter>
         {restaurants.filter(currentFilter).map((data, index) => {
           const restaurant = new Restaurant(data);
-          return currentRestaurant && currentRestaurant === restaurant.id ? (
+          return currentRestaurant && currentRestaurant.id === restaurant.id ? (
             <RestaurantDetails
               key={`${restaurant.id}-${index}`}
               restaurant={restaurant}
@@ -118,7 +128,7 @@ class Results extends React.Component {
               restaurant={restaurant}
               event={() => {
                 this.addMarker(restaurant);
-                updateCurrentRestaurant(restaurant.id);
+                updateCurrentRestaurant(restaurant);
               }}
             />
           );
