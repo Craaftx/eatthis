@@ -57,8 +57,9 @@ const ReviewCard = ({ review }) => {
   );
 };
 
-export default ReviewCard;
-
 ReviewCard.propTypes = {
   review: PropTypes.objectOf(Review).isRequired
 };
+
+export default ReviewCard;
+

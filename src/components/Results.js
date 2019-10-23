@@ -30,6 +30,9 @@ const ResultsFilter = styled.div`
   padding: 15px 10px 15px 25px;
   box-sizing: border-box;
   margin-bottom: 20px;
+  h3 {
+    margin: 0 0 5px 0;
+  }
 `;
 
 class Results extends React.Component {
@@ -39,7 +42,7 @@ class Results extends React.Component {
       default: () => {
         return true;
       },
-      stars: number => element => element.rating === number
+      stars: number => element => Math.round(element.rating) === number
     };
     this.state = {
       currentRestaurant: null,
