@@ -69,18 +69,72 @@ const RestaurantReviews = styled.div`
 `;
 
 const StreetViewWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 260px;
+  height: 240px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12
+    );
+    filter: blur(4px);
+  }
+`;
+
+const StreetViewActivate = styled.button`
+  color: #fff;
+  box-sizing: border-box;
+  margin: 1rem auto;
+  padding: 5px 10px;
+  width: 160px;
+  text-align: center;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-familly: inherit;
+  background-image: linear-gradient(
+    to bottom,
+    #4845ab,
+    #643fa3,
+    #793a99,
+    #89348f,
+    #953084
+  );
 `;
 
 class RestaurantDetails extends React.Component {
   constructor(props) {
     super(props);
     this.htmlStreetView = React.createRef();
+    this.state = {
+      streetViewIsDisplay: false,
+      updateStreetViewIsDisplay: this.updateStreetViewIsDisplay
+    };
   }
+
+  updateStreetViewIsDisplay = () => {
+    this.setState({ streetViewIsDisplay: true });
+  };
 
   render() {
     const { restaurant } = this.props;
+    const { streetViewIsDisplay, updateStreetViewIsDisplay } = this.state;
     return (
       <Wrapper>
         <RestaurantHeader>
@@ -93,7 +147,7 @@ class RestaurantDetails extends React.Component {
               0m de votre position
             </small>
             <RestaurantRating>
-              <Stars number={restaurant.rating} isFulled/>
+              <Stars number={restaurant.rating} isFulled />
               <small>{restaurant.reviewCount} avis</small>
             </RestaurantRating>
             <RestaurantDescriptionFood>
@@ -102,15 +156,6 @@ class RestaurantDetails extends React.Component {
             </RestaurantDescriptionFood>
           </RestaurantDescription>
         </RestaurantHeader>
-        <RestaurantStreetView>
-          <h3>Street View</h3>
-          <StreetViewWrapper>
-            <StreetView
-              latitude={restaurant.latitude}
-              longitude={restaurant.longitude}
-            />
-          </StreetViewWrapper>
-        </RestaurantStreetView>
         <RestaurantReviews>
           <h3>
             Commentaires <small>({restaurant.reviews.length})</small>
@@ -119,6 +164,26 @@ class RestaurantDetails extends React.Component {
             <ReviewCard key={review.id} review={review} />
           ))}
         </RestaurantReviews>
+        <RestaurantStreetView>
+          <h3>Street View</h3>
+          <StreetViewWrapper>
+            {streetViewIsDisplay ? (
+              <StreetView
+                latitude={restaurant.latitude}
+                longitude={restaurant.longitude}
+              />
+            ) : (
+              <StreetViewActivate
+                onClick={() => {
+                  updateStreetViewIsDisplay();
+                }}
+                type="button"
+              >
+                Activer la StreetView
+              </StreetViewActivate>
+            )}
+          </StreetViewWrapper>
+        </RestaurantStreetView>
       </Wrapper>
     );
   }
