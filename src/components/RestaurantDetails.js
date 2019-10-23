@@ -75,47 +75,26 @@ const StreetViewWrapper = styled.div`
   justify-content: center;
   width: 100%;
   height: 240px;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      to right top,
-      #051937,
-      #004d7a,
-      #008793,
-      #00bf72,
-      #a8eb12
-    );
-    filter: blur(4px);
-  }
+  z-index: 2;
+  background-image: linear-gradient(to right top, #fbfbfb, #fafafc, #f9f9fd, #f7f9fe, #f4f8ff);
 `;
 
 const StreetViewActivate = styled.button`
   color: #fff;
   box-sizing: border-box;
   margin: 1rem auto;
-  padding: 5px 10px;
-  width: 160px;
+  padding: 10px 15px;
   text-align: center;
   border: 0;
   border-radius: 4px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
   font-familly: inherit;
-  background-image: linear-gradient(
-    to bottom,
-    #4845ab,
-    #643fa3,
-    #793a99,
-    #89348f,
-    #953084
-  );
+  background: transparent;
+  color: #4845ab;
+  border: 2px solid #4845ab;
+  cursor: pointer;
 `;
 
 class RestaurantDetails extends React.Component {
@@ -179,7 +158,7 @@ class RestaurantDetails extends React.Component {
                 }}
                 type="button"
               >
-                Activer la StreetView
+                Activer StreetView
               </StreetViewActivate>
             )}
           </StreetViewWrapper>
