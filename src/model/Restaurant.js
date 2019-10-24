@@ -6,13 +6,13 @@ export default class Restaurant {
     this._id = data.id;
     this._alias = data.alias;
     this._name = data.name;
-    this._imageUrl = data.image_url ? data.image_url : placeholder;
-    this._reviewCount = data.review_count;
+    this._imageUrl = data.imageUrl ? data.imageUrl : placeholder;
+    this._reviewCount = data.reviewCount;
     this._rating = data.rating;
-    this._categories = data.categories.map(category => category.title);
-    this._latitude = data.coordinates.latitude;
-    this._longitude = data.coordinates.longitude;
-    this._displayAddress = data.location.display_address.join(" ");
+    this._categories = data.categories;
+    this._latitude = data.latitude;
+    this._longitude = data.longitude;
+    this._displayAddress = data.displayAddress;
     this._reviews = data.reviews.map(
       review => new Review(review)
     );
