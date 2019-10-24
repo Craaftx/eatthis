@@ -7,6 +7,7 @@ import GoogleMaps from "./components/GoogleMaps";
 import Menu from "./components/Menu";
 import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
+import AddButton from "./components/AddButton";
 
 const Wrapper = styled.div`
   position: relative;
@@ -70,6 +71,13 @@ const Loading = styled.div`
   }
   animation: ${rotate} 1s linear infinite;
 `;
+
+const AddButtonWrapper = styled.div`
+  position: absolute;
+  left: 130px;
+  bottom: 30px;
+  z-index: 99;
+`
 
 class App extends React.Component {
   constructor(props) {
@@ -155,6 +163,9 @@ class App extends React.Component {
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
+        <AddButtonWrapper>
+          <AddButton event={() => {}}/>
+        </AddButtonWrapper>
         {googleScriptLoaded ? (
           <MyContext.Provider
             value={{ map, updateMap, markers, addMarker, removeMarker }}
