@@ -3,6 +3,7 @@ import styled from "styled-components";
 import googleMapsTheme from "../utils/GoogleMapsTheme";
 import MyContext from "../utils/MyContext";
 import usermarker from "../usermarker.png";
+import GooglePlace from "../utils/GooglePlace";
 
 const Map = styled.div`
   width: 100%;
@@ -20,7 +21,7 @@ class GoogleMaps extends React.Component {
   componentDidMount() {
     this.initMap(this.context);
   }
-  
+
   handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(
@@ -46,7 +47,7 @@ class GoogleMaps extends React.Component {
 
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
-        (position) => {
+        position => {
           const pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
@@ -57,9 +58,24 @@ class GoogleMaps extends React.Component {
             position: pos,
             animation: window.google.maps.Animation.DROP,
             icon: usermarker,
-            map: this.map,
+            map: this.map
           });
-          addMarker({"userMarker": userMarker});
+          addMarker({ userMarker });
+
+          const { markers } = this.context;
+          const location = new window.google.maps.LatLng(
+            markers[0].userMarker.getPosition().lat(),
+            markers[0].userMarker.getPosition().lng()
+          );
+
+          const request = {
+            location,
+            radius: "500",
+            type: ["restaurant"],
+            map: this.map
+          };
+
+          GooglePlace(request);
         },
         () => {
           this.handleLocationError(true, this.infoWindow, this.map.getCenter());
