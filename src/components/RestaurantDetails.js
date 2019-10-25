@@ -76,7 +76,14 @@ const StreetViewWrapper = styled.div`
   width: 100%;
   height: 240px;
   z-index: 2;
-  background-image: linear-gradient(to right top, #fbfbfb, #fafafc, #f9f9fd, #f7f9fe, #f4f8ff);
+  background-image: linear-gradient(
+    to right top,
+    #fbfbfb,
+    #fafafc,
+    #f9f9fd,
+    #f7f9fe,
+    #f4f8ff
+  );
 `;
 
 const StreetViewActivate = styled.button`
@@ -135,14 +142,16 @@ class RestaurantDetails extends React.Component {
             </RestaurantDescriptionFood>
           </RestaurantDescription>
         </RestaurantHeader>
-        <RestaurantReviews>
-          <h3>
-            Commentaires <small>({restaurant.reviews.length})</small>
-          </h3>
-          {restaurant.reviews.map(review => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
-        </RestaurantReviews>
+        {restaurant.reviews && (
+          <RestaurantReviews>
+            <h3>
+              Commentaires <small>({restaurant.reviews.length})</small>
+            </h3>
+            {restaurant.reviews.map(review => (
+              <ReviewCard key={review.id} review={review} />
+            ))}
+          </RestaurantReviews>
+        )}
         <RestaurantStreetView>
           <h3>Street View</h3>
           <StreetViewWrapper>
