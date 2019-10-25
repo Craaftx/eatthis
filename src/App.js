@@ -8,6 +8,8 @@ import Menu from "./components/Menu";
 import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
 import AddButton from "./components/AddButton";
+import YelpAdapter from "./model/YelpAdapter";
+import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
 
 const Wrapper = styled.div`
   position: relative;
@@ -77,7 +79,7 @@ const AddButtonWrapper = styled.div`
   left: 130px;
   bottom: 30px;
   z-index: 99;
-`
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -100,7 +102,9 @@ class App extends React.Component {
       googleScriptLoaded: false,
       updateGoogleScriptStatus: this.updateGoogleScriptStatus,
       map: null,
-      updateMap: this.updateMap
+      updateMap: this.updateMap,
+      placesData: null,
+      updatePlacesData: this.updatePlacesData
     };
   }
 
@@ -118,19 +122,21 @@ class App extends React.Component {
 
   removeMarker = markerId => {
     this.setState(prevState => ({
-      markers: prevState.markers.filter(
-        currentMarker => { 
-          if(Object.keys(currentMarker)[0] === markerId) {
-            currentMarker[`${Object.keys(currentMarker)[0]}`].setMap(null);
-          }
-          return Object.keys(currentMarker)[0] !== markerId
+      markers: prevState.markers.filter(currentMarker => {
+        if (Object.keys(currentMarker)[0] === markerId) {
+          currentMarker[`${Object.keys(currentMarker)[0]}`].setMap(null);
         }
-      )
+        return Object.keys(currentMarker)[0] !== markerId;
+      })
     }));
   };
 
   updateGoogleScriptStatus = googleScriptLoaded => {
     this.setState({ googleScriptLoaded });
+  };
+
+  updatePlacesData = placesData => {
+    this.setState({ placesData });
   };
 
   updateMap = map => {
@@ -158,19 +164,41 @@ class App extends React.Component {
       googleScriptLoaded,
       markers,
       addMarker,
-      removeMarker
+      removeMarker,
+      placesData,
+      updatePlacesData
     } = this.state;
+    // TODO: placesData child are no the same type of jsonRestaurantList[
+    if(placesData) {
+      console.log(typeof placesData[0] === typeof jsonRestaurantList[0])
+    } else {
+      console.log("Waiting for placesData")
+    }
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
         <AddButtonWrapper>
-          <AddButton event={() => {}}/>
+          <AddButton event={() => {}} />
         </AddButtonWrapper>
         {googleScriptLoaded ? (
           <MyContext.Provider
-            value={{ map, updateMap, markers, addMarker, removeMarker }}
+            value={{
+              map,
+              updateMap,
+              markers,
+              addMarker,
+              removeMarker,
+              placesData,
+              updatePlacesData
+            }}
           >
-            <Results restaurants={jsonRestaurantList} />
+            <Results
+              restaurants={
+                placesData
+                  ? GooglePlacesAdapter(placesData)
+                  : YelpAdapter(jsonRestaurantList)
+              }
+            />
             <Map>
               <GoogleMaps />
               <Mask />

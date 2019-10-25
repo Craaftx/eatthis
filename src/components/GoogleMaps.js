@@ -33,7 +33,7 @@ class GoogleMaps extends React.Component {
   }
 
   initMap() {
-    const { updateMap, addMarker } = this.context;
+    const { updateMap, addMarker, updatePlacesData } = this.context;
 
     this.map = new window.google.maps.Map(this.htmlMap.current, {
       center: { lat: -34.397, lng: 150.644 },
@@ -75,7 +75,7 @@ class GoogleMaps extends React.Component {
             map: this.map
           };
 
-          GooglePlace(request);
+          updatePlacesData(GooglePlace(request));
         },
         () => {
           this.handleLocationError(true, this.infoWindow, this.map.getCenter());
