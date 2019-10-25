@@ -13,9 +13,21 @@ export default class Restaurant {
     this._latitude = data.latitude;
     this._longitude = data.longitude;
     this._displayAddress = data.displayAddress;
+    this._priceLevel = this.priceLevelToString(data.priceLevel);
     this._reviews = data.reviews.map(
       review => new Review(review)
     );
+  }
+
+  priceLevelToString = (price) => {
+    let priceToString = price;
+    if(typeof price === "number") {
+      priceToString = "";
+      for (let index = 0; index < price; index += 1) {
+        priceToString += "€";
+      }
+    }
+    return priceToString;
   }
 
   get id() {

@@ -3,11 +3,11 @@ import reviewplaceholder from "../reviewplaceholder.jpg"
 export default class Review {
   constructor(data) {
     this._id = data.id;
-    this._name = data.user.name;
-    this._imageUrl = data.user.image_url ? data.user.image_url : reviewplaceholder;
+    this._name = data.name;
+    this._imageUrl = data.imageUrl ? data.imageUrl : reviewplaceholder;
     this._rating = data.rating;
     this._text = data.text;
-    this._timeCreated = data.time_created;
+    this._timeCreated = data.timeCreated;
   }
 
   get id() {
