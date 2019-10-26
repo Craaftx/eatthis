@@ -70,7 +70,7 @@ class GoogleMaps extends React.Component {
 
           const request = {
             location,
-            radius: "500",
+            radius: "1000",
             type: ["restaurant"],
             map: this.map
           };

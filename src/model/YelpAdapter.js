@@ -1,6 +1,4 @@
 const YelpAdapter = data => {
-  console.log(`YelpAdapter: ${data.length}`);
-  console.log(data);
   return data.map(item => {
     return {
       id: item.id,

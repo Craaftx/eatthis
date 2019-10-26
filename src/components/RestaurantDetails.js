@@ -5,6 +5,7 @@ import Stars from "./Stars";
 import Restaurant from "../model/Restaurant";
 import ReviewCard from "./ReviewCard";
 import StreetView from "./StreetView";
+import FormReview from "./FormReview";
 
 const Wrapper = styled.div`
   border-radius: 10px;
@@ -150,6 +151,7 @@ class RestaurantDetails extends React.Component {
             {restaurant.reviews.map(review => (
               <ReviewCard key={review.id} review={review} />
             ))}
+            <FormReview restaurantId={restaurant.id}/>
           </RestaurantReviews>
         )}
         <RestaurantStreetView>

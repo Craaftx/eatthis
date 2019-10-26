@@ -9,7 +9,7 @@ import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
 import AddButton from "./components/AddButton";
 import YelpAdapter from "./model/YelpAdapter";
-import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
+// import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
 
 const Wrapper = styled.div`
   position: relative;
@@ -170,7 +170,12 @@ class App extends React.Component {
     } = this.state;
     // TODO: placesData child are no the same type of jsonRestaurantList[
     if(placesData) {
-      console.log(typeof placesData[0] === typeof jsonRestaurantList[0])
+      console.log("App: placesData");
+      console.log(placesData);
+      console.log(placesData.length);
+      console.log("App: jsonRestaurantList");
+      console.log(jsonRestaurantList);
+      console.log(jsonRestaurantList.length);
     } else {
       console.log("Waiting for placesData")
     }
@@ -194,9 +199,7 @@ class App extends React.Component {
           >
             <Results
               restaurants={
-                placesData
-                  ? GooglePlacesAdapter(placesData)
-                  : YelpAdapter(jsonRestaurantList)
+                  YelpAdapter(jsonRestaurantList)
               }
             />
             <Map>

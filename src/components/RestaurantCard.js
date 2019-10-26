@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import Stars from './Stars';
-import Restaurant from '../model/Restaurant';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import Stars from "./Stars";
+import Restaurant from "../model/Restaurant";
 
 const Wrapper = styled.div`
   display: flex;
@@ -56,34 +56,41 @@ const RestaurantDescriptionFood = styled.div`
     font-size: 0.8rem;
   }
 `;
+class RestaurantCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.htmlStreetView = React.createRef();
+  }
 
-const RestaurantCard = ({ restaurant, event }) => {
-  return (
-    <Wrapper onClick={event}>
-      <RestaurantDescription>
-        <h3>{restaurant.name}</h3>
-        <small>
-          {/* TODO: Use Map Quest to get distance (bike, car, walk), see documentation */}
-          <i className="lni-direction-alt" /> 
-          0m de votre position
-        </small>
-        <RestaurantRating>
-          <Stars number={restaurant.rating} isFulled/>
-          <small>{restaurant.reviewCount} avis</small>
-        </RestaurantRating>
-        <RestaurantDescriptionFood>
-          <h4>Mots Clés</h4>
-          <span>{restaurant.categories.join(', ')}</span>
-        </RestaurantDescriptionFood>
-      </RestaurantDescription>
-      <RestaurantImage src={restaurant.imageUrl} alt={restaurant.name} />
-    </Wrapper>
-  );
-};
-
-export default RestaurantCard;
+  render() {
+    const { event, restaurant } = this.props;
+    return (
+      <Wrapper onClick={event}>
+        <RestaurantDescription>
+          <h3>{restaurant.name}</h3>
+          <small>
+            {/* TODO: Use Map Quest to get distance (bike, car, walk), see documentation */}
+            <i className="lni-direction-alt" />
+            0m de votre position
+          </small>
+          <RestaurantRating>
+            <Stars number={restaurant.rating} isFulled />
+            <small>{restaurant.reviewCount} avis</small>
+          </RestaurantRating>
+          <RestaurantDescriptionFood>
+            <h4>Mots Clés</h4>
+            <span>{restaurant.categories.join(", ")}</span>
+          </RestaurantDescriptionFood>
+        </RestaurantDescription>
+        <RestaurantImage src={restaurant.imageUrl} alt={restaurant.name} />
+      </Wrapper>
+    );
+  }
+}
 
 RestaurantCard.propTypes = {
   restaurant: PropTypes.objectOf(Restaurant).isRequired,
-  event: PropTypes.func.isRequired,
+  event: PropTypes.func.isRequired
 };
+
+export default RestaurantCard;
