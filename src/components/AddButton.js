@@ -27,6 +27,9 @@ const Wrapper = styled.div`
     }
 `
 
+/**
+ * @review: pourquoi tu mets deux fonctions pure dans le même fichier ? Soit tu peux créer un dossier d'icon avec tes svg, soit tu le wrappes direct dans ton addButton.
+ */
 const PlusIcon = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.44 31.44">

@@ -33,6 +33,9 @@ class StreetView extends React.Component {
 
 StreetView.contextType = MyContext;
 
+/**
+ * Tu peux faire une propriété statique ici -> static propTypes = {}
+ */
 StreetView.propTypes = {
   longitude: PropTypes.number.isRequired,
   latitude: PropTypes.number.isRequired

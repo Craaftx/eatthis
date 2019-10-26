@@ -1,6 +1,9 @@
 const GooglePlacesAdapter = data => {
     console.log(`GooglePlacesAdapter: ${data.length}`);
     console.log(data);
+    /**
+     * pas besoin du deuxième return => item =>  ({})
+     */
     return data.map(item => {
       return {
         id: item.place_id,

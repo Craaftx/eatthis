@@ -16,6 +16,9 @@ const emptyStar = key => <i key={key} className="lni-star" />;
 const Stars = ({ number, isFulled }) => {
   const numberRounded = Math.round(number);
   const result = [];
+  /**
+   * @review bon je me doute que c'est en relation avec ton nombre maximum d'étoiles mais en vrai, il vaut mieux éviter ses valeurs magiques (5)
+   */
   for (let index = 0; index < 5; index += 1) {
     if (index < numberRounded) {
       result.push(filledStar(index));

@@ -10,6 +10,9 @@ const Map = styled.div`
   height: 100%;
 `;
 
+/**
+ * @review : tu peux directement faire un export default ici, nan ?
+ */
 class GoogleMaps extends React.Component {
   constructor(props) {
     super(props);
@@ -89,12 +92,16 @@ class GoogleMaps extends React.Component {
 
   render() {
     return (
+      /**
+       * @review: Je pense que tu n'as pas besoin de faire un fragment ici, tu peux juste return <Map ref={this.htmlMap} />
+       */
       <>
         <Map ref={this.htmlMap} />
       </>
     );
   }
 }
+
 GoogleMaps.contextType = MyContext;
 
 export default GoogleMaps;

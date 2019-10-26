@@ -57,6 +57,9 @@ const RestaurantDescriptionFood = styled.div`
   }
 `;
 
+/**
+ * JS Doc ;)
+ */
 const RestaurantCard = ({ restaurant, event }) => {
   return (
     <Wrapper onClick={event}>
@@ -64,6 +67,7 @@ const RestaurantCard = ({ restaurant, event }) => {
         <h3>{restaurant.name}</h3>
         <small>
           {/* TODO: Use Map Quest to get distance (bike, car, walk), see documentation */}
+          {/* Pourquoi tu utilises une className ici ? */}
           <i className="lni-direction-alt" /> 
           0m de votre position
         </small>

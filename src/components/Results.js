@@ -38,6 +38,9 @@ const ResultsFilter = styled.div`
 class Results extends React.Component {
   constructor(props) {
     super(props);
+    /**
+     * @review t'as pas besoin d'un constructeur ici. filters peut être une propriété statique.
+     */
     this.filters = {
       default: () => {
         return true;
@@ -97,6 +100,7 @@ class Results extends React.Component {
         <ResultsTitle>Autour de vous</ResultsTitle>
         <ResultsFilter>
           <h3>Filtrer les résultats</h3>
+          {/* review: tu vas le refactoriser, rassure-moi ? :D */}
           <StarFilter
             number={1}
             event={() => updateCurrentFilter(this.filters.stars(1))}

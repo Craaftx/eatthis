@@ -22,7 +22,7 @@ const ReviewImage = styled.img`
 `;
 
 const ReviewUsername = styled.div`
-  flex; 1;
+  flex: 1;
   margin: 0 0 0 10px;
 `;
 

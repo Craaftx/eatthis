@@ -63,6 +63,9 @@ const Menu = ({ elements }) => {
 };
 
 Menu.propTypes = {
+  /**
+   * @review: une fois fini, tu pourras aller  plus loin dans la définition de ton propTypes ;)
+   */
   elements: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
