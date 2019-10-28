@@ -14,14 +14,15 @@ const filledStar = key => <i key={key} className="lni-star-filled" />;
 const emptyStar = key => <i key={key} className="lni-star" />;
 
 const Stars = ({ number, isFulled }) => {
+  const Star = Object.freeze({ min: 0, max: 5, step: 1 });
   const numberRounded = Math.round(number);
   const result = [];
-  for (let index = 0; index < 5; index += 1) {
+  for (let index = Star.min; index < Star.max; index += Star.step) {
     if (index < numberRounded) {
       result.push(filledStar(index));
     } else {
       const condition = isFulled;
-      if(condition) {
+      if (condition) {
         result.push(emptyStar(index));
       }
     }
@@ -31,7 +32,7 @@ const Stars = ({ number, isFulled }) => {
 
 Stars.propTypes = {
   number: PropTypes.number.isRequired,
-  isFulled: PropTypes.bool.isRequired,
+  isFulled: PropTypes.bool.isRequired
 };
 
 export default Stars;
