@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import LocalStorage from "../utils/LocalStorage";
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css';
+import LocalStorage from "../utils/LocalStorage";
 
 const Container = styled.div`
   width: 100%;
