@@ -20,7 +20,7 @@ class LocalStorage {
     if (storedReviews) {
       this.storageSetItem(restaurantId, [...storedReviews, reviews]);
     } else {
-      this.storageSetItem(restaurantId, reviews);
+      this.storageSetItem(restaurantId, [reviews]);
     }
   };
   
