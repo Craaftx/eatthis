@@ -3,6 +3,7 @@ import placeholder from "../placeholder.jpg";
 
 export default class Restaurant {
   constructor(data) {
+    const priceLevelFormated = this.priceLevelToString(data.priceLevel);
     this._id = data.id;
     this._alias = data.alias;
     this._name = data.name;
@@ -13,22 +14,23 @@ export default class Restaurant {
     this._latitude = data.latitude;
     this._longitude = data.longitude;
     this._displayAddress = data.displayAddress;
-    this._priceLevel = this.priceLevelToString(data.priceLevel);
-    this._reviews = data.reviews.map(
-      review => new Review(review)
-    );
+    this._priceLevel = priceLevelFormated;
+    this._reviews = data.reviews.map(review => new Review(review));
   }
 
-  priceLevelToString = (price) => {
+  priceLevelToString = price => {
     let priceToString = price;
-    if(typeof price === "number") {
+    if(price === undefined) {
+      return "???";
+    }
+    if (typeof price === "number") {
       priceToString = "";
       for (let index = 0; index < price; index += 1) {
         priceToString += "€";
       }
     }
     return priceToString;
-  }
+  };
 
   get id() {
     return this._id;

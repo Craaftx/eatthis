@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import Stars from "./Stars";
-import Review from "../model/Review";
+import ReviewPropType from "../proptypes/ReviewPropType";
 
 const Wrapper = styled.div`
   margin-bottom: 15px;
@@ -58,7 +57,7 @@ const ReviewCard = ({ review }) => {
 };
 
 ReviewCard.propTypes = {
-  review: PropTypes.objectOf(Review).isRequired
+  review: ReviewPropType.isRequired
 };
 
 export default ReviewCard;

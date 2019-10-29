@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+import RestaurantPropType from "../proptypes/RestaurantPropType";
 import Stars from "./Stars";
-import Restaurant from "../model/Restaurant";
 import ReviewCard from "./ReviewCard";
 import StreetView from "./StreetView";
 import FormReview from "./FormReview";
@@ -151,7 +150,7 @@ class RestaurantDetails extends React.Component {
             {restaurant.reviews.map(review => (
               <ReviewCard key={review.id} review={review} />
             ))}
-            <FormReview restaurantId={restaurant.id}/>
+            <FormReview restaurantId={restaurant.id} />
           </RestaurantReviews>
         )}
         <RestaurantStreetView>
@@ -182,5 +181,5 @@ class RestaurantDetails extends React.Component {
 export default RestaurantDetails;
 
 RestaurantDetails.propTypes = {
-  restaurant: PropTypes.objectOf(Restaurant).isRequired
+  restaurant: RestaurantPropType.isRequired
 };

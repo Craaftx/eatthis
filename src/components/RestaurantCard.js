@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import Stars from "./Stars";
-import Restaurant from "../model/Restaurant";
+import RestaurantPropType from "../proptypes/RestaurantPropType";
 
 const Wrapper = styled.div`
   display: flex;
@@ -89,7 +89,7 @@ class RestaurantCard extends React.Component {
 }
 
 RestaurantCard.propTypes = {
-  restaurant: PropTypes.objectOf(Restaurant).isRequired,
+  restaurant: RestaurantPropType.isRequired,
   event: PropTypes.func.isRequired
 };
 
