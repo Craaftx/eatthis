@@ -1,4 +1,4 @@
-const enabled = true;
+const enabled = false;
 
 // Get data for Basic Plan only
 // See https://developers.google.com/maps/billing/gmp-billing#basic-data

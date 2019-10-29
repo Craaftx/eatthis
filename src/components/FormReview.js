@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Rater from 'react-rater'
-import 'react-rater/lib/react-rater.css'
+import LocalStorage from "../utils/LocalStorage";
+import Rater from 'react-rater';
+import 'react-rater/lib/react-rater.css';
 
 const Container = styled.div`
   width: 100%;
@@ -28,13 +29,18 @@ class FormReview extends React.Component {
     this.formRating = React.createRef();
     this.formText = React.createRef();
     this.starRatingControls = null;
+    this.storage = new LocalStorage();
   }
 
   submitFormHandler = event => {
-    const { restaurantId } = this.props;
     event.preventDefault();
-    console.log(restaurantId);
-    console.log(this.formUsername.value);
+    const { restaurantId } = this.props;
+    const newReview = {
+      name: this.formUsername.current.value,
+      text: this.formText.current.value,
+    }
+    this.storage.setReviews(restaurantId, newReview);
+    console.log(this.storage.getReviews(restaurantId));
   };
 
   render() {

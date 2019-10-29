@@ -4,22 +4,33 @@
 //             {}
 //         ]
 //     }
-
-const { localStorage } = window;
-
-const setReviews = (restaurantId, reviews) => {
-  const storedReviews = localStorage.getItem(restaurantId);
-  if (storedReviews) {
-    localStorage.setItem(restaurantId, [...storedReviews, reviews]);
-  } else {
-    localStorage.setItem(restaurantId, [reviews]);
+class LocalStorage {
+  storageGetItem = (key) => {
+    const { localStorage } = window;
+    return JSON.parse(localStorage.getItem(key));
   }
-};
 
-const getReviews = restaurantId => {
-  const storedReviews = localStorage.getItem(restaurantId);
-  if (storedReviews) {
-    return storedReviews;
+  storageSetItem = (key, value) => {
+    const { localStorage } = window;
+    localStorage.setItem(key, JSON.stringify(value));
   }
-  return [];
-};
+
+  setReviews = (restaurantId, reviews) => {
+    const storedReviews = this.storageGetItem(restaurantId);
+    if (storedReviews) {
+      this.storageSetItem(restaurantId, [...storedReviews, reviews]);
+    } else {
+      this.storageSetItem(restaurantId, reviews);
+    }
+  };
+  
+  getReviews = restaurantId => {
+    const storedReviews = this.storageGetItem(restaurantId);
+    if (storedReviews) {
+      return storedReviews;
+    }
+    return [];
+  };
+}
+
+export default LocalStorage;
