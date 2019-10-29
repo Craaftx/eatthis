@@ -169,16 +169,16 @@ class App extends React.Component {
       updatePlacesData
     } = this.state;
     // TODO: placesData child are no the same type of jsonRestaurantList[
-    if(placesData) {
-      console.log("App: placesData");
-      console.log(placesData);
-      console.log(placesData.length);
-      console.log("App: jsonRestaurantList");
-      console.log(jsonRestaurantList);
-      console.log(jsonRestaurantList.length);
-    } else {
-      console.log("Waiting for placesData")
-    }
+    // if(placesData) {
+    //   console.log("App: placesData");
+    //   console.log(placesData);
+    //   console.log(placesData.length);
+    //   console.log("App: jsonRestaurantList");
+    //   console.log(jsonRestaurantList);
+    //   console.log(jsonRestaurantList.length);
+    // } else {
+    //   console.log("Waiting for placesData")
+    // }
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />

@@ -40,7 +40,6 @@ class FormReview extends React.Component {
       text: this.formText.current.value,
     }
     this.storage.setReviews(restaurantId, newReview);
-    console.log(this.storage.getReviews(restaurantId));
   };
 
   render() {

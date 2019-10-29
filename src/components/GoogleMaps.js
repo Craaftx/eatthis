@@ -63,8 +63,6 @@ class GoogleMaps extends React.Component {
           addMarker({ userMarker });
 
           const { markers } = this.context;
-          console.log("GoogleMaps: markers");
-          console.log(markers);
           const location = new window.google.maps.LatLng(
             markers[0].userMarker.getPosition().lat(),
             markers[0].userMarker.getPosition().lng()
