@@ -5,7 +5,7 @@ const RestaurantPropType = shape({
   id: string,
   alias: string.isRequired,
   name: string.isRequired,
-  imageUrl: string.isRequired,
+  imageUrl: string,
   reviewCount: number.isRequired,
   rating: number.isRequired,
   categories: array.isRequired,
