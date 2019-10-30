@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Rater from 'react-rater';
-import 'react-rater/lib/react-rater.css';
+import Rater from "react-rater";
+import "react-rater/lib/react-rater.css";
+import { uid } from "react-uid";
 import LocalStorage from "../utils/LocalStorage";
 
 const Container = styled.div`
@@ -26,20 +27,24 @@ class FormReview extends React.Component {
   constructor(props) {
     super(props);
     this.formUsername = React.createRef();
-    this.formRating = React.createRef();
     this.formText = React.createRef();
-    this.starRatingControls = null;
+    this.formRating = 0;
     this.storage = new LocalStorage();
   }
 
   submitFormHandler = event => {
     event.preventDefault();
-    const { restaurantId } = this.props;
+    const { restaurantId, handler } = this.props;
     const newReview = {
       name: this.formUsername.current.value,
       text: this.formText.current.value,
-    }
+      imageUrl: null,
+      rating: this.formRating,
+      timeCreated: new Date()
+    };
+    newReview.id = `${restaurantId}-${uid(newReview)}`;
     this.storage.setReviews(restaurantId, newReview);
+    handler();
   };
 
   render() {
@@ -53,7 +58,13 @@ class FormReview extends React.Component {
               ref={this.formUsername}
             />
             <FormStarRating>
-                <Rater total={5} rating={0} ref={this.formRating}/>
+              <Rater
+                total={5}
+                rating={0}
+                onRate={({ rating }) => {
+                  this.formRating = rating;
+                }}
+              />
             </FormStarRating>
           </FormGroup>
           <FormTextarea rows="5" name="formText" ref={this.formText} />
@@ -65,7 +76,8 @@ class FormReview extends React.Component {
 }
 
 FormReview.propTypes = {
-  restaurantId: PropTypes.string.isRequired
+  restaurantId: PropTypes.string.isRequired,
+  handler: PropTypes.func.isRequired,
 };
 
 export default FormReview;

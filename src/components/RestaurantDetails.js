@@ -5,6 +5,8 @@ import Stars from "./Stars";
 import ReviewCard from "./ReviewCard";
 import StreetView from "./StreetView";
 import FormReview from "./FormReview";
+import LocalStorage from "../utils/LocalStorage";
+import Review from "../model/Review";
 
 const Wrapper = styled.div`
   border-radius: 10px;
@@ -107,11 +109,21 @@ const StreetViewActivate = styled.button`
 class RestaurantDetails extends React.Component {
   constructor(props) {
     super(props);
+
+    const { restaurant } = props;
+    this.storage = new LocalStorage();
+
     this.htmlStreetView = React.createRef();
     this.state = {
       streetViewIsDisplay: false,
-      updateStreetViewIsDisplay: this.updateStreetViewIsDisplay
+      updateStreetViewIsDisplay: this.updateStreetViewIsDisplay,
+      storedReviews: this.storage.getReviews(restaurant.id)
     };
+  }
+
+  updateStoredReviews = () => {
+    const { restaurant } = this.props;
+    this.setState({ storedReviews: this.storage.getReviews(restaurant.id) });
   }
 
   updateStreetViewIsDisplay = () => {
@@ -120,7 +132,11 @@ class RestaurantDetails extends React.Component {
 
   render() {
     const { restaurant } = this.props;
-    const { streetViewIsDisplay, updateStreetViewIsDisplay } = this.state;
+    const {
+      streetViewIsDisplay,
+      updateStreetViewIsDisplay,
+      storedReviews
+    } = this.state;
     return (
       <Wrapper>
         <RestaurantHeader>
@@ -150,7 +166,14 @@ class RestaurantDetails extends React.Component {
             {restaurant.reviews.map(review => (
               <ReviewCard key={review.id} review={review} />
             ))}
-            <FormReview restaurantId={restaurant.id} />
+            {storedReviews &&
+              storedReviews.map(review => {
+                const reviewObject = new Review(review);
+                return (
+                  <ReviewCard key={reviewObject.id} review={reviewObject} />
+                );
+              })}
+            <FormReview handler={this.updateStoredReviews} restaurantId={restaurant.id} />
           </RestaurantReviews>
         )}
         <RestaurantStreetView>
