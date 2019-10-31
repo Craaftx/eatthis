@@ -7,7 +7,6 @@ import GoogleMaps from "./components/GoogleMaps";
 import Menu from "./components/Menu";
 import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
-import AddButton from "./components/AddButton";
 import YelpAdapter from "./model/YelpAdapter";
 // import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
 
@@ -32,6 +31,7 @@ const Map = styled.div`
   margin-left: 100px;
   width: calc(100% - 100px);
   height: 100%;
+  pointer-event: ${props => props.inactive ? 'none' : 'auto'};
 `;
 
 const Mask = styled.div`
@@ -74,13 +74,6 @@ const Loading = styled.div`
   animation: ${rotate} 1s linear infinite;
 `;
 
-const AddButtonWrapper = styled.div`
-  position: absolute;
-  left: 130px;
-  bottom: 30px;
-  z-index: 99;
-`;
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -104,7 +97,9 @@ class App extends React.Component {
       map: null,
       updateMap: this.updateMap,
       placesData: null,
-      updatePlacesData: this.updatePlacesData
+      updatePlacesData: this.updatePlacesData,
+      mapIsClicked: false,
+      updateMapIsClicked: this.updateMapIsClicked,
     };
   }
 
@@ -143,6 +138,10 @@ class App extends React.Component {
     this.setState({ map });
   };
 
+  updateMapIsClicked = mapIsClicked => {
+    this.setState({ mapIsClicked });
+  };
+
   handleGoogleClientLoad = callback => {
     const script = document.createElement("script");
     script.setAttribute(
@@ -166,7 +165,9 @@ class App extends React.Component {
       addMarker,
       removeMarker,
       placesData,
-      updatePlacesData
+      updatePlacesData,
+      mapIsClicked,
+      updateMapIsClicked
     } = this.state;
     // TODO: placesData child are no the same type of jsonRestaurantList[
     // if(placesData) {
@@ -182,9 +183,6 @@ class App extends React.Component {
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
-        <AddButtonWrapper>
-          <AddButton event={() => {}} />
-        </AddButtonWrapper>
         {googleScriptLoaded ? (
           <MyContext.Provider
             value={{
@@ -194,7 +192,8 @@ class App extends React.Component {
               addMarker,
               removeMarker,
               placesData,
-              updatePlacesData
+              updatePlacesData,
+              updateMapIsClicked
             }}
           >
             <Results
@@ -202,7 +201,7 @@ class App extends React.Component {
                   YelpAdapter(jsonRestaurantList)
               }
             />
-            <Map>
+            <Map inactive={mapIsClicked}>
               <GoogleMaps />
               <Mask />
             </Map>
