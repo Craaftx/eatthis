@@ -75,6 +75,12 @@ class GoogleMaps extends React.Component {
             map: this.map
           };
 
+          this.map.addListener("click", function(event) {
+            const latitude = event.latLng.lat();
+            const longitude = event.latLng.lng();
+            console.log(`${latitude} ${longitude}`);
+          });
+
           updatePlacesData(GooglePlace(request));
         },
         () => {
