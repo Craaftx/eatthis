@@ -5,23 +5,19 @@ import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { uid } from "react-uid";
 import LocalStorage from "../utils/LocalStorage";
+import {
+  Form,
+  FormLabel,
+  FormInput,
+  FormTextarea,
+  FormStarRating
+} from "./Form";
+import { PrimaryButton } from "./Buttons";
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
 `;
-
-const Form = styled.form``;
-
-const FormGroup = styled.div``;
-
-const FormInput = styled.input``;
-
-const FormStarRating = styled.div``;
-
-const FormTextarea = styled.textarea``;
-
-const FormSubmit = styled.input``;
 
 class FormReview extends React.Component {
   constructor(props) {
@@ -50,13 +46,22 @@ class FormReview extends React.Component {
   render() {
     return (
       <Container>
+        <h3>Ajouter un commentaire</h3>
         <Form onSubmit={this.submitFormHandler}>
-          <FormGroup>
+          <FormLabel>
+            Votre nom
             <FormInput
               type="text"
               name="formUsername"
               ref={this.formUsername}
             />
+          </FormLabel>
+          <FormLabel>
+            Votre commentaire
+            <FormTextarea rows="5" name="formText" ref={this.formText} />
+          </FormLabel>
+          <FormLabel>
+            Votre note
             <FormStarRating>
               <Rater
                 total={5}
@@ -66,9 +71,8 @@ class FormReview extends React.Component {
                 }}
               />
             </FormStarRating>
-          </FormGroup>
-          <FormTextarea rows="5" name="formText" ref={this.formText} />
-          <FormSubmit type="submit" />
+          </FormLabel>
+          <PrimaryButton type="submit">Envoyer</PrimaryButton>
         </Form>
       </Container>
     );
@@ -77,7 +81,7 @@ class FormReview extends React.Component {
 
 FormReview.propTypes = {
   restaurantId: PropTypes.string.isRequired,
-  handler: PropTypes.func.isRequired,
+  handler: PropTypes.func.isRequired
 };
 
 export default FormReview;
