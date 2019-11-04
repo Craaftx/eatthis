@@ -43,7 +43,7 @@ class FormRestaurant extends React.Component {
   submitFormHandler = event => {
     event.preventDefault();
     const { updateMapEvent } = this.context;
-    const { latitude, longitude } = this.props;
+    const { latitude, longitude, formattedAddress } = this.props;
     const newRestaurant = {
       id: null,
       alias: null,
@@ -54,7 +54,7 @@ class FormRestaurant extends React.Component {
       categories: this.formTags.current.value.split(','),
       latitude,
       longitude,
-      displayAddress: null,
+      displayAddress: formattedAddress,
       priceLevel: this.formPriceLevel.current.value,
       reviews: null
     };
@@ -120,7 +120,8 @@ class FormRestaurant extends React.Component {
 
 FormRestaurant.propTypes = {
   latitude: PropTypes.number.isRequired,
-  longitude: PropTypes.number.isRequired
+  longitude: PropTypes.number.isRequired,
+  formattedAddress: PropTypes.string.isRequired
 };
 
 FormRestaurant.contextType = MyContext;

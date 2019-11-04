@@ -9,6 +9,7 @@ import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
 import YelpAdapter from "./model/YelpAdapter";
 import FormRestaurant from "./components/FormRestaurant";
+import MapQuest from "./utils/MapQuest";
 // import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
 
 const Wrapper = styled.div`
@@ -96,6 +97,10 @@ class App extends React.Component {
       { icon: "lni-coffee-cup" },
       { icon: "lni-more" }
     ];
+
+    MapQuest("geocoding", { location: "30.333472,-81.470448" }).then(data =>
+      console.log(data)
+    );
 
     this.state = {
       markers: [],
@@ -211,6 +216,7 @@ class App extends React.Component {
                 <FormRestaurant
                   latitude={mapEvent.latitude}
                   longitude={mapEvent.longitude}
+                  formattedAddress="TODO: Get data from GeoCoding API of MapQuest because GoogleMaps GeoCoding is not free"
                 />
               </RestaurantFormWrapper>
             )}
