@@ -8,6 +8,7 @@ import Menu from "./components/Menu";
 import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
 import YelpAdapter from "./model/YelpAdapter";
+import FormRestaurant from "./components/FormRestaurant";
 // import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
 
 const Wrapper = styled.div`
@@ -31,7 +32,15 @@ const Map = styled.div`
   margin-left: 100px;
   width: calc(100% - 100px);
   height: 100%;
-  pointer-event: ${props => props.inactive ? 'none' : 'auto'};
+  display: ${props => (props.inactive ? "none" : "block")};
+`;
+
+const RestaurantFormWrapper = styled.div`
+  position: absolute;
+  z-index: 10;
+  left: 150px;
+  bottom: 5vh;
+  width: 400px;
 `;
 
 const Mask = styled.div`
@@ -98,8 +107,8 @@ class App extends React.Component {
       updateMap: this.updateMap,
       placesData: null,
       updatePlacesData: this.updatePlacesData,
-      mapIsClicked: false,
-      updateMapIsClicked: this.updateMapIsClicked,
+      mapEvent: null,
+      updateMapEvent: this.updateMapEvent
     };
   }
 
@@ -138,8 +147,8 @@ class App extends React.Component {
     this.setState({ map });
   };
 
-  updateMapIsClicked = mapIsClicked => {
-    this.setState({ mapIsClicked });
+  updateMapEvent = mapEvent => {
+    this.setState({ mapEvent });
   };
 
   handleGoogleClientLoad = callback => {
@@ -166,8 +175,8 @@ class App extends React.Component {
       removeMarker,
       placesData,
       updatePlacesData,
-      mapIsClicked,
-      updateMapIsClicked
+      mapEvent,
+      updateMapEvent
     } = this.state;
     // TODO: placesData child are no the same type of jsonRestaurantList[
     // if(placesData) {
@@ -193,15 +202,19 @@ class App extends React.Component {
               removeMarker,
               placesData,
               updatePlacesData,
-              updateMapIsClicked
+              updateMapEvent
             }}
           >
-            <Results
-              restaurants={
-                  YelpAdapter(jsonRestaurantList)
-              }
-            />
-            <Map inactive={mapIsClicked}>
+            <Results restaurants={YelpAdapter(jsonRestaurantList)} />
+            {mapEvent && (
+              <RestaurantFormWrapper>
+                <FormRestaurant
+                  latitude={mapEvent.latitude}
+                  longitude={mapEvent.longitude}
+                />
+              </RestaurantFormWrapper>
+            )}
+            <Map inactive={mapEvent}>
               <GoogleMaps />
               <Mask />
             </Map>
