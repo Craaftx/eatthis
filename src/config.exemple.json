@@ -1,7 +1,7 @@
 {
   "google": {
     "apiKey": "API_KEY",
-    "libraries": ["LIBRARY_ONE","LIBRARY_TWO"]
+    "libraries": ["places"]
   },
   "yelp": {
     "clientId": "API_CLIENT_ID",
