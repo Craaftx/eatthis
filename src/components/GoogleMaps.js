@@ -76,22 +76,9 @@ class GoogleMaps extends React.PureComponent {
           this.map.addListener("click", event => {
             const latitude = event.latLng.lat();
             const longitude = event.latLng.lng();
-
-            const geocoder = new window.google.maps.Geocoder();
-            geocoder.geocode({ location: {lat: latitude, lng: longitude }}, (results, status) => {
-              if (status === "OK") {
-                if (results[0]) {
-                  updateMapEvent({
-                    latitude,
-                    longitude,
-                    formatted_address: results[0].formatted_address
-                  });
-                } else {
-                  console.log("No results found");
-                }
-              } else {
-                console.log(`Geocoder failed due to:  ${status}`);
-              }
+            updateMapEvent({
+              latitude,
+              longitude
             });
           });
 
