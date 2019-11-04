@@ -33,7 +33,12 @@ class GoogleMaps extends React.PureComponent {
   }
 
   initMap() {
-    const { updateMap, addMarker, updatePlacesData, updateMapEvent } = this.context;
+    const {
+      updateMap,
+      addMarker,
+      updatePlacesData,
+      updateMapEvent
+    } = this.context;
 
     this.map = new window.google.maps.Map(this.htmlMap.current, {
       center: { lat: -34.397, lng: 150.644 },
@@ -68,19 +73,34 @@ class GoogleMaps extends React.PureComponent {
             markers[0].userMarker.getPosition().lng()
           );
 
+          this.map.addListener("click", event => {
+            const latitude = event.latLng.lat();
+            const longitude = event.latLng.lng();
+
+            const geocoder = new window.google.maps.Geocoder();
+            geocoder.geocode({ location: {lat: latitude, lng: longitude }}, (results, status) => {
+              if (status === "OK") {
+                if (results[0]) {
+                  updateMapEvent({
+                    latitude,
+                    longitude,
+                    formatted_address: results[0].formatted_address
+                  });
+                } else {
+                  console.log("No results found");
+                }
+              } else {
+                console.log(`Geocoder failed due to:  ${status}`);
+              }
+            });
+          });
+
           const request = {
             location,
             radius: "1000",
             type: ["restaurant"],
             map: this.map
           };
-
-          this.map.addListener("click", (event) => {
-            const latitude = event.latLng.lat();
-            const longitude = event.latLng.lng();
-            updateMapEvent({latitude, longitude});
-          });
-
           updatePlacesData(GooglePlace(request));
         },
         () => {
