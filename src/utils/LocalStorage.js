@@ -1,9 +1,3 @@
-//     2jri34oepejw34: {
-//         reviews: [
-//             {},
-//             {}
-//         ]
-//     }
 class LocalStorage {
   storageGetItem = (key) => {
     const { localStorage } = window;
