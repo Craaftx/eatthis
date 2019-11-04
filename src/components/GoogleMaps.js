@@ -10,7 +10,7 @@ const Map = styled.div`
   height: 100%;
 `;
 
-class GoogleMaps extends React.Component {
+class GoogleMaps extends React.PureComponent {
   constructor(props) {
     super(props);
     this.map = null;
@@ -33,7 +33,7 @@ class GoogleMaps extends React.Component {
   }
 
   initMap() {
-    const { updateMap, addMarker, updatePlacesData } = this.context;
+    const { updateMap, addMarker, updatePlacesData, updateMapEvent } = this.context;
 
     this.map = new window.google.maps.Map(this.htmlMap.current, {
       center: { lat: -34.397, lng: 150.644 },
@@ -75,10 +75,10 @@ class GoogleMaps extends React.Component {
             map: this.map
           };
 
-          this.map.addListener("click", function(event) {
+          this.map.addListener("click", (event) => {
             const latitude = event.latLng.lat();
             const longitude = event.latLng.lng();
-            console.log(`${latitude} ${longitude}`);
+            updateMapEvent({latitude, longitude});
           });
 
           updatePlacesData(GooglePlace(request));

@@ -25,6 +25,23 @@ class LocalStorage {
     }
     return [];
   };
+
+  addRestaurant = (restaurant) => {
+    const storedRestaurants = this.storageGetItem("restaurants");
+    if (storedRestaurants) {
+      this.storageSetItem("restaurants", [...storedRestaurants, restaurant]);
+    } else {
+      this.storageSetItem("restaurants", [restaurant]);
+    }
+  };
+  
+  getRestaurants = () => {
+    const storedRestaurants = this.storageGetItem("restaurants");
+    if (storedRestaurants) {
+      return storedRestaurants;
+    }
+    return [];
+  };
 }
 
 export default LocalStorage;
