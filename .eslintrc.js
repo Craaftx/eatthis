@@ -21,6 +21,7 @@ module.exports = {
     "react/jsx-filename-extension": 0,
     "react/no-array-index-key": 0,
     "no-underscore-dangle": 0,
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "jsx-a11y/label-has-associated-control": 0,
   }
 };
