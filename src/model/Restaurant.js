@@ -20,7 +20,7 @@ export default class Restaurant {
   priceLevelToString = price => {
     let priceToString = price;
     if(price === undefined) {
-      return "???";
+      return "?";
     }
     if (typeof price === "number") {
       priceToString = "";
