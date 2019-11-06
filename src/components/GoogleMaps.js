@@ -90,8 +90,6 @@ class GoogleMaps extends React.PureComponent {
           };
 
           const googlePlaceData = await GooglePlace(request);
-          console.log('GoogleMaps: initMap: googlePlaceData');
-          console.log(googlePlaceData);
           updatePlacesData(googlePlaceData)
         },
         () => {
