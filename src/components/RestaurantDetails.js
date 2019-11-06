@@ -124,7 +124,7 @@ class RestaurantDetails extends React.Component {
   updateStoredReviews = () => {
     const { restaurant } = this.props;
     this.setState({ storedReviews: this.storage.getReviews(restaurant.id) });
-  }
+  };
 
   updateStreetViewIsDisplay = () => {
     this.setState({ streetViewIsDisplay: true });
@@ -145,9 +145,9 @@ class RestaurantDetails extends React.Component {
             <h3>{restaurant.name}</h3>
             <small>
               {/* TODO: Use Map Quest to get distance (bike, car, walk), see documentation */}
-              <i className="lni-direction-alt" />
-              0m de votre position
+              <i className="lni-direction-alt" /> 0m de votre position
             </small>
+            <small>{` - ${restaurant.priceLevel}`}</small>
             <RestaurantRating>
               <Stars number={restaurant.rating} isFulled />
               <small>{restaurant.reviewCount} avis</small>
@@ -173,7 +173,10 @@ class RestaurantDetails extends React.Component {
                   <ReviewCard key={reviewObject.id} review={reviewObject} />
                 );
               })}
-            <FormReview handler={this.updateStoredReviews} restaurantId={restaurant.id} />
+            <FormReview
+              handler={this.updateStoredReviews}
+              restaurantId={restaurant.id}
+            />
           </RestaurantReviews>
         )}
         <RestaurantStreetView>
