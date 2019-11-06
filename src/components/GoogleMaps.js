@@ -52,7 +52,7 @@ class GoogleMaps extends React.PureComponent {
 
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
-        position => {
+        async (position) => {
           const pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
@@ -88,7 +88,11 @@ class GoogleMaps extends React.PureComponent {
             type: ["restaurant"],
             map: this.map
           };
-          updatePlacesData(GooglePlace(request));
+
+          const googlePlaceData = await GooglePlace(request);
+          console.log('GoogleMaps: initMap: googlePlaceData');
+          console.log(googlePlaceData);
+          updatePlacesData(googlePlaceData)
         },
         () => {
           this.handleLocationError(true, this.infoWindow, this.map.getCenter());
