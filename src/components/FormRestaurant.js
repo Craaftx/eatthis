@@ -5,9 +5,17 @@ import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { uid } from "react-uid";
 import MyContext from "../utils/MyContext";
+import MapQuest from "../utils/MapQuest";
 import LocalStorage from "../utils/LocalStorage";
 import { PrimaryButton, TertiaryButton } from "./Buttons";
-import { Form, FormLabel, FormInput, FormSelect, FormGroup, FormStarRating } from "./Form";
+import {
+  Form,
+  FormLabel,
+  FormInput,
+  FormSelect,
+  FormGroup,
+  FormStarRating
+} from "./Form";
 
 const Container = styled.div`
   border-radius: 10px;
@@ -27,7 +35,7 @@ const Container = styled.div`
 const TertiaryButtonDestructive = styled(TertiaryButton)`
   color: #e53935;
   margin-left: 20px;
-`
+`;
 
 class FormRestaurant extends React.Component {
   constructor(props) {
@@ -40,10 +48,14 @@ class FormRestaurant extends React.Component {
     this.storage = new LocalStorage();
   }
 
-  submitFormHandler = event => {
+  submitFormHandler = async event => {
     event.preventDefault();
     const { updateMapEvent } = this.context;
-    const { latitude, longitude, formattedAddress } = this.props;
+    const { latitude, longitude } = this.props;
+    const formattedAddress = await MapQuest("geocoding", {
+      location: `${latitude},${longitude}`
+    });
+    console.log(formattedAddress.results[0].locations[0].street);
     const newRestaurant = {
       id: null,
       alias: null,
@@ -51,7 +63,7 @@ class FormRestaurant extends React.Component {
       imageUrl: this.formImageUrl.current.value,
       reviewCount: 1,
       rating: this.formRating,
-      categories: this.formTags.current.value.split(','),
+      categories: this.formTags.current.value.split(","),
       latitude,
       longitude,
       displayAddress: formattedAddress,
@@ -71,7 +83,12 @@ class FormRestaurant extends React.Component {
         <Form onSubmit={this.submitFormHandler}>
           <FormLabel>
             Nom
-            <FormInput type="text" name="formName" ref={this.formName} required/>
+            <FormInput
+              type="text"
+              name="formName"
+              ref={this.formName}
+              required
+            />
           </FormLabel>
           <FormLabel>
             Image
@@ -85,12 +102,21 @@ class FormRestaurant extends React.Component {
           </FormLabel>
           <FormLabel>
             Catégories
-            <FormInput type="text" name="formTags" ref={this.formTags} required/>
+            <FormInput
+              type="text"
+              name="formTags"
+              ref={this.formTags}
+              required
+            />
             <small>Séparées par des virgules</small>
           </FormLabel>
           <FormLabel>
             Niveau des prix
-            <FormSelect name="formPriceLevel" ref={this.formPriceLevel} required>
+            <FormSelect
+              name="formPriceLevel"
+              ref={this.formPriceLevel}
+              required
+            >
               <option>€</option>
               <option>€€</option>
               <option>€€€</option>
@@ -110,7 +136,13 @@ class FormRestaurant extends React.Component {
           </FormLabel>
           <FormGroup>
             <PrimaryButton type="submit">Ajouter un restaurant</PrimaryButton>
-            <TertiaryButtonDestructive onClick={() => { updateMapEvent(null) }}>Annuler</TertiaryButtonDestructive>
+            <TertiaryButtonDestructive
+              onClick={() => {
+                updateMapEvent(null);
+              }}
+            >
+              Annuler
+            </TertiaryButtonDestructive>
           </FormGroup>
         </Form>
       </Container>
@@ -120,8 +152,7 @@ class FormRestaurant extends React.Component {
 
 FormRestaurant.propTypes = {
   latitude: PropTypes.number.isRequired,
-  longitude: PropTypes.number.isRequired,
-  formattedAddress: PropTypes.string.isRequired
+  longitude: PropTypes.number.isRequired
 };
 
 FormRestaurant.contextType = MyContext;
