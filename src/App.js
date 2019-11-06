@@ -9,8 +9,7 @@ import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
 import YelpAdapter from "./model/YelpAdapter";
 import FormRestaurant from "./components/FormRestaurant";
-import MapQuest from "./utils/MapQuest";
-// import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
+import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
 
 const Wrapper = styled.div`
   position: relative;
@@ -98,10 +97,6 @@ class App extends React.Component {
       { icon: "lni-more" }
     ];
 
-    MapQuest("geocoding", { location: "30.333472,-81.470448" }).then(data =>
-      console.log(data)
-    );
-
     this.state = {
       markers: [],
       addMarker: this.addMarker,
@@ -115,6 +110,8 @@ class App extends React.Component {
       mapEvent: null,
       updateMapEvent: this.updateMapEvent
     };
+    
+    // TODO: get PlaceData and use adapater on it when load
   }
 
   componentDidMount() {
@@ -183,17 +180,6 @@ class App extends React.Component {
       mapEvent,
       updateMapEvent
     } = this.state;
-    // TODO: placesData child are no the same type of jsonRestaurantList[
-    // if(placesData) {
-    //   console.log("App: placesData");
-    //   console.log(placesData);
-    //   console.log(placesData.length);
-    //   console.log("App: jsonRestaurantList");
-    //   console.log(jsonRestaurantList);
-    //   console.log(jsonRestaurantList.length);
-    // } else {
-    //   console.log("Waiting for placesData")
-    // }
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
