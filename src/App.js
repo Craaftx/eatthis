@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import GoogleApi from "./utils/GoogleApi";
 import config from "./config";
 import MyContext from "./utils/MyContext";
@@ -11,6 +11,7 @@ import YelpAdapter from "./model/YelpAdapter";
 import FormRestaurant from "./components/FormRestaurant";
 import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
 import LocalStorage from "./utils/LocalStorage";
+import { rotate } from "./utils/keyframes";
 
 const Wrapper = styled.div`
   position: relative;
@@ -52,16 +53,6 @@ const Mask = styled.div`
   width: 100%;
   height: 100%;
   pointer-events: none;
-`;
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 `;
 
 const Loading = styled.div`
