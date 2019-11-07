@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
-import { uid } from "react-uid";
+import uuid from 'uuidv4';
 import LocalStorage from "../utils/LocalStorage";
 import {
   Form,
@@ -31,15 +31,14 @@ class FormReview extends React.Component {
   submitFormHandler = event => {
     event.preventDefault();
     const { restaurantId, handler } = this.props;
-    const newReview = {
+    this.storage.setReviews(restaurantId, {
+      id: uuid(),
       name: this.formUsername.current.value,
       text: this.formText.current.value,
       imageUrl: null,
       rating: this.formRating,
       timeCreated: new Date()
-    };
-    newReview.id = `${restaurantId}-${uid(newReview)}`;
-    this.storage.setReviews(restaurantId, newReview);
+    });
     handler();
   };
 

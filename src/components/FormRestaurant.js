@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
-import { uid } from "react-uid";
+import uuid from 'uuidv4';
 import MyContext from "../utils/MyContext";
 import MapQuest from "../utils/MapQuest";
 import LocalStorage from "../utils/LocalStorage";
@@ -16,8 +16,10 @@ import {
   FormGroup,
   FormStarRating
 } from "./Form";
+import { fadeIn } from "../utils/keyframes";
 
 const Container = styled.div`
+  position: relative;
   border-radius: 10px;
   background-color: #ffffff;
   padding: 15px 25px 10px 25px;
@@ -37,9 +39,40 @@ const TertiaryButtonDestructive = styled(TertiaryButton)`
   margin-left: 20px;
 `;
 
+const FormValidatation = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 15px 40px 15px 40px;
+  box-sizing: border-box;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  animation: ${fadeIn} 200ms ease-out forwards;
+`;
+
+const FormValidatationBody = styled.div`
+  i {
+    font-size: 60px;
+    color: #6e2e94;
+  }
+  h2 {
+    margin: 40px 0 20px 0;
+  }
+`;
+
 class FormRestaurant extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      formSubmited: false
+    };
+
     this.formName = React.createRef();
     this.formImageUrl = React.createRef();
     this.formTags = React.createRef();
@@ -50,13 +83,12 @@ class FormRestaurant extends React.Component {
 
   submitFormHandler = async event => {
     event.preventDefault();
-    const { updateMapEvent } = this.context;
     const { latitude, longitude } = this.props;
     const formattedAddress = await MapQuest("geocoding", {
       location: `${latitude},${longitude}`
     });
-    const newRestaurant = {
-      id: null,
+    this.storage.addRestaurant({
+      id: uuid(),
       alias: null,
       name: this.formName.current.value,
       imageUrl: this.formImageUrl.current.value,
@@ -68,13 +100,18 @@ class FormRestaurant extends React.Component {
       displayAddress: formattedAddress.results[0].locations[0].street,
       priceLevel: this.formPriceLevel.current.value,
       reviews: []
-    };
-    newRestaurant.id = `${newRestaurant.rating}eat${uid(newRestaurant)}this`;
-    this.storage.addRestaurant(newRestaurant);
+    });
+    this.setState({ formSubmited: true });
+  };
+
+  closeForm = event => {
+    event.preventDefault();
+    const { updateMapEvent } = this.context;
     updateMapEvent(null);
   };
 
   render() {
+    const { formSubmited } = this.state;
     const { updateMapEvent } = this.context;
     return (
       <Container>
@@ -144,6 +181,21 @@ class FormRestaurant extends React.Component {
             </TertiaryButtonDestructive>
           </FormGroup>
         </Form>
+        {formSubmited && (
+          <FormValidatation>
+            <FormValidatationBody>
+              <i className="lni-thumbs-up" />
+              <h2>Le restaurant a été ajouté, merci de votre contribution</h2>
+              <PrimaryButton
+                onClick={e => {
+                  this.closeForm(e);
+                }}
+              >
+                Fermer
+              </PrimaryButton>
+            </FormValidatationBody>
+          </FormValidatation>
+        )}
       </Container>
     );
   }
