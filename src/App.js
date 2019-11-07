@@ -10,6 +10,7 @@ import Results from "./components/Results";
 import YelpAdapter from "./model/YelpAdapter";
 import FormRestaurant from "./components/FormRestaurant";
 import GooglePlacesAdapter from "./model/GooglePlacesAdapter";
+import LocalStorage from "./utils/LocalStorage";
 
 const Wrapper = styled.div`
   position: relative;
@@ -83,6 +84,13 @@ const Loading = styled.div`
   animation: ${rotate} 1s linear infinite;
 `;
 
+const aggregateData = (items = []) => {
+  if (items.length > 1) {
+    return items.flat(2);
+  }
+  return items;
+};
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -98,6 +106,8 @@ class App extends React.Component {
     ];
 
     this.state = {
+      positionMarker: null,
+      setPositionMarker: this.setPositionMarker,
       markers: [],
       addMarker: this.addMarker,
       removeMarker: this.removeMarker,
@@ -110,8 +120,8 @@ class App extends React.Component {
       mapEvent: null,
       updateMapEvent: this.updateMapEvent
     };
-    
-    // TODO: get PlaceData and use adapater on it when load
+
+    this.storage = new LocalStorage();
   }
 
   componentDidMount() {
@@ -124,6 +134,10 @@ class App extends React.Component {
   addMarker = marker => {
     const { markers } = this.state;
     this.setState({ markers: [...markers, marker] });
+  };
+
+  setPositionMarker = positionMarker => {
+    this.setState({ positionMarker });
   };
 
   removeMarker = markerId => {
@@ -172,6 +186,8 @@ class App extends React.Component {
       map,
       updateMap,
       googleScriptLoaded,
+      positionMarker,
+      setPositionMarker,
       markers,
       addMarker,
       removeMarker,
@@ -180,6 +196,13 @@ class App extends React.Component {
       mapEvent,
       updateMapEvent
     } = this.state;
+
+    const restaurantData = aggregateData([
+      this.storage.getRestaurants(),
+      placesData ? GooglePlacesAdapter(placesData) : [],
+      YelpAdapter(jsonRestaurantList)
+    ]);
+
     return (
       <Wrapper>
         <Menu elements={this.menuElements} />
@@ -188,6 +211,8 @@ class App extends React.Component {
             value={{
               map,
               updateMap,
+              positionMarker,
+              setPositionMarker,
               markers,
               addMarker,
               removeMarker,
@@ -196,13 +221,12 @@ class App extends React.Component {
               updateMapEvent
             }}
           >
-            <Results restaurants={YelpAdapter(jsonRestaurantList)} />
+            <Results restaurants={restaurantData} />
             {mapEvent && (
               <RestaurantFormWrapper>
                 <FormRestaurant
                   latitude={mapEvent.latitude}
                   longitude={mapEvent.longitude}
-                  formattedAddress="TODO: Get data from GeoCoding API of MapQuest because GoogleMaps GeoCoding is not free"
                 />
               </RestaurantFormWrapper>
             )}

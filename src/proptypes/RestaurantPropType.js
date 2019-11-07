@@ -3,7 +3,7 @@ import ReviewPropType from "./ReviewPropType";
 
 const RestaurantPropType = shape({
   id: string,
-  alias: string.isRequired,
+  alias: string,
   name: string.isRequired,
   imageUrl: string,
   reviewCount: number.isRequired,
