@@ -35,7 +35,7 @@ class GoogleMaps extends React.PureComponent {
   initMap() {
     const {
       updateMap,
-      addMarker,
+      setPositionMarker,
       updatePlacesData,
       updateMapEvent
     } = this.context;
@@ -65,12 +65,11 @@ class GoogleMaps extends React.PureComponent {
             icon: usermarker,
             map: this.map
           });
-          addMarker({ userMarker });
+          setPositionMarker(userMarker);
 
-          const { markers } = this.context;
           const location = new window.google.maps.LatLng(
-            markers[0].userMarker.getPosition().lat(),
-            markers[0].userMarker.getPosition().lng()
+            userMarker.getPosition().lat(),
+            userMarker.getPosition().lng()
           );
 
           this.map.addListener("click", event => {
