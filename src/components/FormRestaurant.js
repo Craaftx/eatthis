@@ -55,7 +55,6 @@ class FormRestaurant extends React.Component {
     const formattedAddress = await MapQuest("geocoding", {
       location: `${latitude},${longitude}`
     });
-    console.log(formattedAddress.results[0].locations[0].street);
     const newRestaurant = {
       id: null,
       alias: null,
@@ -66,9 +65,9 @@ class FormRestaurant extends React.Component {
       categories: this.formTags.current.value.split(","),
       latitude,
       longitude,
-      displayAddress: formattedAddress,
+      displayAddress: formattedAddress.results[0].locations[0].street,
       priceLevel: this.formPriceLevel.current.value,
-      reviews: null
+      reviews: []
     };
     newRestaurant.id = `${newRestaurant.rating}eat${uid(newRestaurant)}this`;
     this.storage.addRestaurant(newRestaurant);
