@@ -7,6 +7,17 @@ import StreetView from "./StreetView";
 import FormReview from "./FormReview";
 import LocalStorage from "../utils/LocalStorage";
 import Review from "../model/Review";
+import {
+  RestaurantRating,
+  RestaurantDescriptionFood,
+  RestaurantDescription as unStyledRestaurantDescription,
+  RestaurantImage as unStyledRestaurantImage,
+  RestaurantHeader,
+  RestaurantStreetView,
+  RestaurantReviews,
+  RestaurantStreetViewWrapper, 
+} from "./Restaurant";
+import { SecondaryButton } from "./Buttons";
 
 const Wrapper = styled.div`
   border-radius: 10px;
@@ -20,7 +31,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const RestaurantDescription = styled.div`
+const RestaurantDescription = styled(unStyledRestaurantDescription)`
+  flex: none;
   padding: 15px 20px 15px 20px;
   h3 {
     margin: 0 0 5px 0;
@@ -31,79 +43,13 @@ const RestaurantDescription = styled.div`
   }
 `;
 
-const RestaurantImage = styled.img`
+const RestaurantImage = styled(unStyledRestaurantImage)`
+  flex: none;
+  border-radius: 0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  height: 160px;
   width: 100%;
-  object-fit: cover;
-`;
-
-const RestaurantRating = styled.div`
-  margin: 10px 0;
-  small {
-    color: #8b86c8;
-    margin-left: 5px;
-  }
-`;
-
-const RestaurantDescriptionFood = styled.div`
-  h4 {
-    margin: 15px 0 5px 0;
-    color: #555;
-    font-weight: 500;
-    font-size: 0.8rem;
-  }
-`;
-
-const RestaurantHeader = styled.div`
-  width: 100%;
-`;
-
-const RestaurantStreetView = styled.div`
-  padding: 15px 20px 15px 20px;
-  border-top: 1px solid #efefef;
-`;
-
-const RestaurantReviews = styled.div`
-  padding: 15px 20px 15px 20px;
-  border-top: 1px solid #efefef;
-`;
-
-const StreetViewWrapper = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 240px;
-  z-index: 2;
-  background-image: linear-gradient(
-    to right top,
-    #fbfbfb,
-    #fafafc,
-    #f9f9fd,
-    #f7f9fe,
-    #f4f8ff
-  );
-`;
-
-const StreetViewActivate = styled.button`
-  color: #fff;
-  box-sizing: border-box;
-  margin: 1rem auto;
-  padding: 10px 15px;
-  text-align: center;
-  border: 0;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-familly: inherit;
-  background: transparent;
-  color: #4845ab;
-  border: 2px solid #4845ab;
-  cursor: pointer;
+  max-width: 100%;
 `;
 
 class RestaurantDetails extends React.Component {
@@ -181,23 +127,23 @@ class RestaurantDetails extends React.Component {
         )}
         <RestaurantStreetView>
           <h3>Street View</h3>
-          <StreetViewWrapper>
+          <RestaurantStreetViewWrapper>
             {streetViewIsDisplay ? (
               <StreetView
                 latitude={restaurant.latitude}
                 longitude={restaurant.longitude}
               />
             ) : (
-              <StreetViewActivate
+              <SecondaryButton
                 onClick={() => {
                   updateStreetViewIsDisplay();
                 }}
                 type="button"
               >
                 Activer StreetView
-              </StreetViewActivate>
+              </SecondaryButton>
             )}
-          </StreetViewWrapper>
+          </RestaurantStreetViewWrapper>
         </RestaurantStreetView>
       </Wrapper>
     );

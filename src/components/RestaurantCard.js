@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Stars from "./Stars";
 import RestaurantPropType from "../proptypes/RestaurantPropType";
+import { RestaurantRating, RestaurantDescriptionFood, RestaurantDescription, RestaurantImage } from "./Restaurant"
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,42 +21,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const RestaurantDescription = styled.div`
-  flex: 2;
-  padding-right: 10px;
-  h3 {
-    margin: 0 0 5px 0;
-    font-family: "Montserrat", sans-serif;
-  }
-  small {
-    color: #888;
-  }
-`;
-
-const RestaurantImage = styled.img`
-  flex: 1;
-  border-radius: 5px;
-  height: 160px;
-  max-width: 100px;
-  object-fit: cover;
-`;
-
-const RestaurantRating = styled.div`
-  margin: 10px 0;
-  small {
-    color: #8b86c8;
-    margin-left: 5px;
-  }
-`;
-
-const RestaurantDescriptionFood = styled.div`
-  h4 {
-    margin: 15px 0 5px 0;
-    color: #555;
-    font-weight: 500;
-    font-size: 0.8rem;
-  }
-`;
 class RestaurantCard extends React.Component {
   constructor(props) {
     super(props);
