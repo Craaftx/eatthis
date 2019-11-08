@@ -42,7 +42,7 @@ class GoogleMaps extends React.PureComponent {
 
     this.map = new window.google.maps.Map(this.htmlMap.current, {
       center: { lat: -34.397, lng: 150.644 },
-      zoom: 14,
+      zoom: 15,
       styles: googleMapsTheme,
       disableDefaultUI: true,
       zoomControl: true,
