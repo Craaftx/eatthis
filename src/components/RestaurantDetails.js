@@ -15,7 +15,7 @@ import {
   RestaurantHeader,
   RestaurantStreetView,
   RestaurantReviews,
-  RestaurantStreetViewWrapper, 
+  RestaurantStreetViewWrapper
 } from "./Restaurant";
 import { SecondaryButton } from "./Buttons";
 
@@ -52,7 +52,7 @@ const RestaurantImage = styled(unStyledRestaurantImage)`
   max-width: 100%;
 `;
 
-class RestaurantDetails extends React.Component {
+class RestaurantDetails extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -90,10 +90,10 @@ class RestaurantDetails extends React.Component {
           <RestaurantDescription>
             <h3>{restaurant.name}</h3>
             <small>
-              {/* TODO: Use Map Quest to get distance (bike, car, walk), see documentation */}
-              <i className="lni-direction-alt" /> 0m de votre position
+              <b>{restaurant.displayAddress}</b>
             </small>
-            <small>{` - ${restaurant.priceLevel}`}</small>
+            <br />
+            <small>{`Prix : ${restaurant.priceLevel}`}</small>
             <RestaurantRating>
               <Stars number={restaurant.rating} isFulled />
               <small>{restaurant.reviewCount} avis</small>
@@ -104,27 +104,29 @@ class RestaurantDetails extends React.Component {
             </RestaurantDescriptionFood>
           </RestaurantDescription>
         </RestaurantHeader>
-        {restaurant.reviews && (
-          <RestaurantReviews>
-            <h3>
-              Commentaires <small>({restaurant.reviews.length})</small>
-            </h3>
-            {restaurant.reviews.map(review => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
-            {storedReviews &&
-              storedReviews.map(review => {
-                const reviewObject = new Review(review);
-                return (
-                  <ReviewCard key={reviewObject.id} review={reviewObject} />
-                );
-              })}
-            <FormReview
-              handler={this.updateStoredReviews}
-              restaurantId={restaurant.id}
-            />
-          </RestaurantReviews>
-        )}
+        <RestaurantReviews>
+          {restaurant.reviews.length > 0 && (
+            <>
+              <h3>
+                Commentaires <small>({restaurant.reviews.length})</small>
+              </h3>
+              {restaurant.reviews.map(review => (
+                <ReviewCard key={review.id} review={review} />
+              ))}
+              {storedReviews &&
+                storedReviews.map(review => {
+                  const reviewObject = new Review(review);
+                  return (
+                    <ReviewCard key={reviewObject.id} review={reviewObject} />
+                  );
+                })}
+            </>
+          )}
+          <FormReview
+            handler={this.updateStoredReviews}
+            restaurantId={restaurant.id}
+          />
+        </RestaurantReviews>
         <RestaurantStreetView>
           <h3>Street View</h3>
           <RestaurantStreetViewWrapper>

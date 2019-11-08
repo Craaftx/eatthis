@@ -3,7 +3,12 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Stars from "./Stars";
 import RestaurantPropType from "../proptypes/RestaurantPropType";
-import { RestaurantRating, RestaurantDescriptionFood, RestaurantDescription, RestaurantImage } from "./Restaurant"
+import {
+  RestaurantRating,
+  RestaurantDescriptionFood,
+  RestaurantDescription,
+  RestaurantImage
+} from "./Restaurant";
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +26,7 @@ const Wrapper = styled.div`
   }
 `;
 
-class RestaurantCard extends React.Component {
+class RestaurantCard extends React.PureComponent {
   constructor(props) {
     super(props);
     this.htmlStreetView = React.createRef();
@@ -33,15 +38,13 @@ class RestaurantCard extends React.Component {
       <Wrapper onClick={event}>
         <RestaurantDescription>
           <h3>{restaurant.name}</h3>
-          <small>
-            {/* TODO: Use Map Quest to get distance (bike, car, walk), see documentation */}
-            <i className="lni-direction-alt" /> 0m de votre position
-          </small>
-          <small>{` - ${restaurant.priceLevel}`}</small>
           <RestaurantRating>
             <Stars number={restaurant.rating} isFulled />
             <small>{restaurant.reviewCount} avis</small>
           </RestaurantRating>
+          <small>
+            <b>{`Prix :  ${restaurant.priceLevel}`}</b>
+          </small>
           <RestaurantDescriptionFood>
             <h4>Mots Clés</h4>
             <span>{restaurant.categories.join(", ")}</span>

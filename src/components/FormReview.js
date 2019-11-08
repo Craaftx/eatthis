@@ -19,7 +19,7 @@ const Container = styled.div`
   height: 100%;
 `;
 
-class FormReview extends React.Component {
+class FormReview extends React.PureComponent {
   constructor(props) {
     super(props);
     this.formUsername = React.createRef();
