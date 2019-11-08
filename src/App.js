@@ -4,7 +4,6 @@ import GoogleApi from "./utils/GoogleApi";
 import config from "./config";
 import MyContext from "./utils/MyContext";
 import GoogleMaps from "./components/GoogleMaps";
-import Menu from "./components/Menu";
 import jsonRestaurantList from "./restaurant_list";
 import Results from "./components/Results";
 import YelpAdapter from "./model/YelpAdapter";
@@ -31,8 +30,7 @@ const Wrapper = styled.div`
 `;
 
 const Map = styled.div`
-  margin-left: 100px;
-  width: calc(100% - 100px);
+  width: 100%;
   height: 100%;
   display: ${props => (props.inactive ? "none" : "block")};
 `;
@@ -40,25 +38,14 @@ const Map = styled.div`
 const RestaurantFormWrapper = styled.div`
   position: absolute;
   z-index: 10;
-  left: 150px;
+  left: 50px;
   bottom: 5vh;
   width: 400px;
 `;
 
-const Mask = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: radial-gradient(circle, transparent 60%, #cfcfe6 80%, #cfcfe6);
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-`;
-
 const Loading = styled.div`
   position: relative;
-  margin-left: 100px;
-  width: calc(100% - 100px);
+  width: 100%;
   height: 100%;
   &::after {
     content: "";
@@ -85,17 +72,6 @@ const aggregateData = (items = []) => {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.menuElements = [
-      { icon: "lni-menu" },
-      { icon: "lni-dinner" },
-      { icon: "lni-burger" },
-      { icon: "lni-pizza" },
-      { icon: "lni-chef-hat" },
-      { icon: "lni-fresh-juice" },
-      { icon: "lni-coffee-cup" },
-      { icon: "lni-more" }
-    ];
-
     this.state = {
       positionMarker: null,
       setPositionMarker: this.setPositionMarker,
@@ -196,7 +172,6 @@ class App extends React.Component {
 
     return (
       <Wrapper>
-        <Menu elements={this.menuElements} />
         {googleScriptLoaded ? (
           <MyContext.Provider
             value={{
@@ -223,7 +198,6 @@ class App extends React.Component {
             )}
             <Map inactive={mapEvent}>
               <GoogleMaps />
-              <Mask />
             </Map>
           </MyContext.Provider>
         ) : (
